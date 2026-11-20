@@ -5,6 +5,8 @@ only a small verified corpus of official Indian sources, and drafts a grievance 
 facts. It is general legal information, not legal advice. Scope: one problem type (online/offline purchase
 not delivered, faulty, wrong, cancelled without refund, or return refused).
 
+Repo: https://github.com/Akashkar00/haq-ai-consumer-rights-assistant
+
 ## Run
 
 ```bash

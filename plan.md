@@ -831,7 +831,7 @@ reviewed; no case law; thresholds may change; drafts need human review; no persi
 - [x] ≥10 test cases run; raw outputs saved unedited, including failures
 - [x] Metrics table with automatic + manual scores in `EVAL_REPORT.md` (manual = author self-review per §15.2, plus an LLM judge; not a lawyer review)
 - [x] Every corpus entry has URL, retrieval date, verification status
-- [~] ≤2-page PDF (done, 1 page) and raw outputs folder (done); **public repo/app link not done** (no deploy or push); optional video not made
+- [x] ≤2-page PDF (1 page), raw outputs folder, public repo: https://github.com/Akashkar00/haq-ai-consumer-rights-assistant (verified: fresh clone installs and passes tests; no secrets). Streamlit Cloud deploy (P1) and optional video (P1) not done
 
 ---
 
