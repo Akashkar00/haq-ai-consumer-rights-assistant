@@ -184,13 +184,14 @@ def _llm_explanation(llm, messages) -> Explanation:
                        uncertainties=["The automatic explanation step failed; please check the sources directly."])
 
 
-def retrieve_for_case(corpus: Corpus, case: CaseFile, bm25_only: bool = False) -> list[Chunk]:
-    """BM25 retrieval, plus the entries the options ladder cites (unless bm25_only, used to measure BM25 alone)."""
+def retrieve_for_case(corpus: Corpus, case: CaseFile, bm25_only: bool = False, method: str = "auto") -> list[Chunk]:
+    """Ranked retrieval (BM25, vector or hybrid), plus the entries the options ladder cites (unless bm25_only, which returns the
+    ranker output alone so evals can measure it)."""
     issue = case.issue_type.value if case.issue_type else None
     query = " ".join(filter(None, [issue and issue.replace("_", " "), case.product_or_service, case.remedy_sought,
                                    "refund consumer complaint e-commerce grievance"]))
     on_platform = bool(case.platform)  # the E-Commerce Rules apply to platform purchases, not a local shop
-    chunks = corpus.retrieve(query, issue, k=7, exclude_tag=None if on_platform else "ecommerce")
+    chunks = corpus.retrieve(query, issue, k=7, exclude_tag=None if on_platform else "ecommerce", method=method)
     if bm25_only:
         return chunks
     have = {c.entry["id"] for c in chunks}

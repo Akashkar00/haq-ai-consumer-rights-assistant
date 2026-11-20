@@ -1,6 +1,11 @@
 import json
+import os
 
 import pytest
+
+
+# Offline tests must never call Vertex or Qdrant, whatever .env says.
+os.environ["RETRIEVAL_MODE"] = "bm25"
 
 
 class FakeLLM:

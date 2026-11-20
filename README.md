@@ -31,6 +31,8 @@ uv run python scripts/verify_corpus.py     # corpus verbatim text vs saved offic
 uv run python -m evals.run on              # 13 eval cases, raw outputs in raw_outputs/<run_id>/
 ```
 
+Retrieval: Vertex AI `gemini-embedding-001` + Qdrant (`RETRIEVAL_MODE=vector|hybrid|bm25`, BM25 fallback). Index with `uv run python scripts/index_corpus.py`; set `QDRANT_URL` (use `:443`) and `QDRANT_API_KEY` for Qdrant Cloud, or leave them unset for a local on-disk store.
+
 Layout: `haq/` app code · `haq/guardrails/` NeMo config, Colang flows, actions · `data/corpus.jsonl` verified
 corpus (`SOURCES.md`, `EXCLUDED.md`, `raw_sources/`) · `evals/` · `tests/` · `docs/` · `plan.md`.
 

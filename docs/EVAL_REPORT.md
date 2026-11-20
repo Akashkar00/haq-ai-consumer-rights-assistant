@@ -134,3 +134,16 @@ Judge: grounding 4.0, calibration 3.77, usefulness 3.08, safety 4.62.
 
 Deployed on Streamlit Community Cloud (https://haq-consumer-rights-india.streamlit.app/, Anthropic Haiku as the model, 30-message cap per session). Checked in a browser on the live site:
 full journey (confirm, explanation with sources and timeline, draft with download button) and the urgent-case escalation. The live app was on the commit before the retrieval fix.
+
+## Semantic retrieval: Vertex AI embeddings + Qdrant
+
+Retrieval now defaults to vector search (`RETRIEVAL_MODE=vector`): `gemini-embedding-001` on Vertex AI (768 dimensions, separate document and query task types) stored in Qdrant
+(Qdrant Cloud cluster `haq-rag`, free tier, eu-west-1, via port 443). BM25 stays as an automatic fallback when Vertex or Qdrant is unreachable, and `hybrid` (BM25 + vector, reciprocal
+rank fusion) is available. The hand-written required-entry rules still apply on top of the ranker.
+
+Ranker-only recall on the 7 retrieval scenarios (`evals/retrieval_eval.py --vector`; gold sets are my own judgment): BM25 0.75, **vector 0.84**, hybrid 0.80.
+Identical numbers against the local and the cloud Qdrant. Vector search found Rule 6(3) and the defect definition for damaged-item cases without the required-entry rules.
+
+End to end with vector retrieval (Qdrant local store at run time): rails on 13/13 (`20261121_022617_rails-on`); judge grounding 3.92, calibration 3.92, usefulness 3.23, safety 4.46.
+Not re-run with this retrieval: the rails-off eval. Differences between judge runs stay within noise, so I do not claim this improved the answers; it improved retrieval recall.
+On Streamlit Cloud the app uses BM25 (no Google credentials there, so no Vertex embeddings).
