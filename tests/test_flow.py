@@ -196,3 +196,27 @@ def test_outcome_sentence_removed_but_answer_kept(rails):
     r = s.handle("yes")
     assert "definitely win" not in r.text and "never arrived" in r.text and "Sources" in r.text
     assert "outcome_sentence_removed" in r.flags
+
+
+def test_timeline_computed_in_code(rails):
+    s = session(FakeLLM(case=FULL_CASE))  # complaint 2026-10-20, order 2026-10-05, today 2026-11-20
+    s.handle(STORY)
+    r = s.handle("yes")
+    assert "Your timeline" in r.text
+    assert "20 November 2026" in r.text and "reached the platform" in r.text and "counting from 20 November 2026" in r.text
+    assert "05 October 2028" in r.text
+
+
+def test_add_months_clamps_day():
+    from datetime import date as D
+    from haq.explainer import _add_months
+    assert _add_months(D(2026, 1, 31), 1) == D(2026, 2, 28) and _add_months(D(2026, 10, 5), 24) == D(2028, 10, 5)
+
+
+def test_no_doubled_punctuation_after_citation_rewrite():
+    from haq.explainer import fix_limit_citations
+    from haq.corpus import Chunk
+    c = Corpus()
+    chunks = [Chunk("S1", c.by_id["CPA2019-34"]), Chunk("S4", c.by_id["JUR2021-3"])]
+    out = fix_limit_citations("Limit is fifty lakh rupees [S1], [S4], and more.", chunks)
+    assert ",," not in out.replace(" ", "") and out.count("[") == 1

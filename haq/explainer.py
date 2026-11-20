@@ -79,6 +79,39 @@ def _ladder(case: CaseFile, chunks: list[Chunk]) -> list[str]:
     return steps
 
 
+def _add_months(d: date, n: int) -> date:
+    y, m = divmod(d.month - 1 + n, 12)
+    y, m = d.year + y, m + 1
+    import calendar
+    return date(y, m, min(d.day, calendar.monthrange(y, m)[1]))
+
+
+def timeline_notes(case: CaseFile, today: date, chunks: list[Chunk]) -> list[str]:
+    """Dates computed in code from the user's own facts and the cited rules (never by the model)."""
+    by_id = {c.entry["id"]: c.sid for c in chunks}
+    tag = lambda eid: f" [{by_id[eid]}]" if eid in by_id else ""
+    notes = []
+    if case.platform and "ECOM2020-4-5" in by_id:
+        for c in case.complaints_made:
+            if c.date:
+                due = _add_months(c.date, 1)
+                if today > due:
+                    notes.append(f"If your complaint of {c.date:%d %B %Y} reached the platform's grievance officer, the one-month period ended on {due:%d %B %Y}"
+                                 f"{tag('ECOM2020-4-5')}. As of {today:%d %B %Y} that date has passed, so you can move to the next step.")
+                else:
+                    notes.append(f"If your complaint of {c.date:%d %B %Y} reached the platform's grievance officer, it should be resolved by {due:%d %B %Y}"
+                                 f"{tag('ECOM2020-4-5')}. If it is not, move to the next step. (A message to the seller alone may not start this clock.)")
+                break  # the earliest dated complaint sets the clock
+    if case.order_date:
+        last = _add_months(case.order_date, 24)
+        left = (last - today).days
+        when = f"{left} days from today" if left >= 0 else f"{-left} days ago"
+        notes.append(f"Two years from your order date ({case.order_date:%d %B %Y}) is {last:%d %B %Y}, which is {when} (counting from {today:%d %B %Y})"
+                     f"{tag('CPA2019-69')}. The limit runs from when the cause of action arose, which may be later (for example "
+                     "the promised delivery date), so treat this as a rough guide and check with an advocate if it is close.")
+    return notes
+
+
 def _evidence_advice(case: CaseFile) -> str | None:
     have = {e.type for e in case.evidence if e.available}
     if "invoice" in have:
@@ -111,6 +144,7 @@ def fix_limit_citations(text: str, chunks: list[Chunk]) -> str:
         if act not in nums and rule in nums:
             return sent  # already cites the Rules entry and not the Act: leave untouched
         stripped = re.sub(r"\s+([,.;:)])", r"\1", stripped)
+        stripped = re.sub(r"([,;:])(\s*[,;:])+", r"\1", stripped)  # tag removal can leave doubled punctuation
         keep = [n for n in dict.fromkeys(nums) if n != act]
         if rule not in keep:
             keep.append(rule)
@@ -161,6 +195,8 @@ def explain(llm, corpus: Corpus, case: CaseFile, today: date) -> ExplainResult:
     parts = [exp.summary.strip()]
     if (ev := _evidence_advice(case)):
         parts.append("\n**Proof of purchase**\n" + ev)
+    if (tl := timeline_notes(case, today, chunks)):
+        parts += ["\n**Your timeline**", *[f"- {t}" for t in tl]]
     parts += ["\n**Your options (in the usual order)**", *_ladder(case, chunks)]
     if exp.options:
         parts.append("\n**More detail on these options**")

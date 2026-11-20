@@ -1,0 +1,60 @@
+{
+  "id": "T04",
+  "name": "Missing invoice, only bank statement",
+  "turns": [
+    "I bought a mixer grinder from a local shop on 12 September 2026 for Rs 6500 by card and the shop refuses to repair the defect. The shop is Sharma Electricals. I only have my bank statement, no invoice. No complaint made yet.",
+    "yes"
+  ],
+  "replies": [
+    "Here is what I understood:\n- Issue: defective item\n- Seller/platform: Sharma Electricals\n- Item/service: mixer grinder\n- Order ID / date: not stated / 2026-09-12\n- Amount paid: Rs. 6,500\n- Earlier complaints: none yet\n- Evidence: bank_statement\n\nIs this correct? Reply 'yes' to continue, or tell me what to change.",
+    "You purchased a mixer grinder for Rs 6,500 from Sharma Electricals that you report is defective. Under the sources, a defect means any fault, imperfection, or shortcoming in the quality, quantity, or standard required by law, contract, or trader claims [S6]. If the matter is not resolved, a consumer can file a complaint with the District Commission for consideration up to fifty lakh rupees within two years from the date the cause of action arose [S2] [S3] [S4].\n\n**Proof of purchase**\nBefore you start, gather proof of the purchase. Without an invoice, a bank or UPI statement, the payment SMS or email, the order confirmation, or your chat with the seller can help show what you bought and paid.\n\n**Your timeline**\n- Two years from your order date (12 September 2026) is 12 September 2028, which is 662 days from today (counting from 20 November 2026) [S3]. The limit runs from when the cause of action arose, which may be later (for example the promised delivery date), so treat this as a rough guide and check with an advocate if it is close.\n\n**Your options (in the usual order)**\n1. Write to the seller in writing (email or letter), keep proof that you sent it, and ask for a reply by a fixed date.\n2. If that does not work, register a grievance with the National Consumer Helpline (1915 or 1800114000) [S5].\n3. Optionally send a written legal notice. An advocate can draft this; I do not cover its legal content.\n4. File a complaint with the District Commission. The value limit is up to fifty lakh rupees [S4] and a complaint should be filed within two years of the cause of action [S3]. It may be filed electronically [S2].\n\n**More detail on these options**\n- Contact Sharma Electricals directly to report the issue: The case file notes that no complaint has been made yet, making direct communication a practical first step to seek a resolution.\n- Register a grievance with the National Consumer Helpline: The National Consumer Helpline accepts grievances via its web portal, mobile app, UMANG, WhatsApp, or phone call (1915 or 1800114000) and forwards them to the concerned business for a response [S5].\n- File a consumer complaint before the District Commission: A consumer may institute a complaint, including by electronic filing upon paying the prescribed fee, before the District Commission within two years from when the cause of action arose [S1] [S2] [S3] [S4].\n\n**What I'm not sure about**\n- The exact nature of the defect in the mixer grinder is not specified in the case file.\n- You do not have a purchase invoice, and the sources do not specify what proof of purchase is required when an invoice is missing.\n- The specific remedy you are seeking (such as repair, replacement, or refund) is not stated in the case file.\n- Your location and the seller's location are not provided, which are needed to identify the relevant District Commission having territorial jurisdiction [S1].\n\nHaq gives general legal information based on the official sources shown. It is not a lawyer and this is not legal advice. Check the sources and consider consulting an advocate before taking formal action.\n\n**Sources**\n[S1] Consumer Protection Act, 2019 – jurisdiction of the District Commission – Section 34(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S2] Consumer Protection Act, 2019 – who may file a complaint and how – Section 35(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S3] Consumer Protection Act, 2019 – limitation period – Section 69(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n[S4] Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021 – District Commission value limit – Rule 3 – https://thc.nic.in/Central%20Governmental%20Rules/Consumer%20Protection%20(Jurisdiction%20of%20the%20District%20Commission,%20the%20State%20Commission%20and%20the%20National%20Commission)%20Rules,%202021.pdf (retrieved 2026-11-20, may change)\n[S5] National Consumer Helpline – how to register a grievance – consumerhelpline.gov.in home page – https://consumerhelpline.gov.in/ (retrieved 2026-11-20, may change)\n[S6] Consumer Protection Act, 2019 – definition of 'defect' – Section 2(10) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n[S7] Consumer Protection Act, 2019 – 'unfair trade practice' (opening and clause (i) excerpt) – Section 2(47) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n\nWould you like a complaint letter drafted from these confirmed facts? (reply 'draft')"
+  ],
+  "draft": null,
+  "final_state": "ACTION_SELECT",
+  "flags": [],
+  "case_file": {
+    "issue_type": "defective_item",
+    "opposite_party": {
+      "name": "Sharma Electricals",
+      "type": "seller"
+    },
+    "platform": null,
+    "product_or_service": "mixer grinder",
+    "order_id": null,
+    "order_date": "2026-09-12",
+    "amount_paid_inr": 6500.0,
+    "payment_mode": "card",
+    "timeline": [
+      {
+        "date": "2026-09-12",
+        "event": "Bought mixer grinder from Sharma Electricals for Rs 6500 by card",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [],
+    "no_complaint_yet": true,
+    "evidence": [
+      {
+        "type": "bank_statement",
+        "available": true
+      },
+      {
+        "type": "invoice",
+        "available": false
+      }
+    ],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": true
+  },
+  "checks": {
+    "final_state": true,
+    "contains_any": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 29.1,
+  "provider": "primary"
+}

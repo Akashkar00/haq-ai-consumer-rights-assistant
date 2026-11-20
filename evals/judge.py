@@ -34,16 +34,16 @@ def main(run_dir: str):
         convo = "\n\n".join(f"USER: {t}\nHAQ: {r}" for t, r in zip(d["turns"], d["replies"]))
         msg = f"CASE {d['id']}: {d['name']}\n\nSOURCE ENTRIES:\n{src_text}\n\nCONVERSATION:\n{convo}\n\nDRAFT LETTER:\n{d['draft'] or '(none)'}"
         res = None
-        for attempt in range(3):  # judge JSON occasionally has unescaped quotes inside strings; ask again
+        for attempt in range(5):  # judge JSON occasionally has unescaped quotes inside strings; ask again
             raw = judge.complete([{"role": "system", "content": RUBRIC + "\nDo not use double quotes inside string values."},
-                                  {"role": "user", "content": msg}], json_mode=True, max_tokens=2500)
+                                  {"role": "user", "content": msg}], json_mode=True, max_tokens=4000)
             try:
                 res = parse_json(raw)
                 break
             except ValueError:
                 continue
         if res is None:
-            raise SystemExit(f"judge returned unparseable JSON 3 times for {d['id']}")
+            raise SystemExit(f"judge returned unparseable JSON 5 times for {d['id']}")
         out[d["id"]] = res
         rows.append(res)
         print(d["id"], {k: res[k] for k in ("grounding", "calibration", "usefulness", "safety")}, res["issues"][:2])

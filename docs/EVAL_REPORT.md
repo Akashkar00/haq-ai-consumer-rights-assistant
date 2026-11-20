@@ -114,3 +114,9 @@ Hindi input (those are covered by the eval and stress scripts, not the UI).
 - Late fixes from these checks: sentence-level removal of outcome promises (one bad sentence used to replace the entire answer in T04), 60s LLM
   timeouts (a stalled Vertex call hung the UI), Rules citation for the fifty-lakh limit, Hinglish confirmation version, no unstated facts in explanations.
 - Not done: human or lawyer review; Vertex latency varied a lot during testing (30s to 250s per case), so timings in the raw outputs are noisy.
+
+## After the timeline section (final)
+
+Automatic: rails on 13/13 (`20261121_015214_rails-on`), rails off 13/13 (`20261121_015814_rails-off`), no fallback calls. Judge on the final code: grounding 4.15, calibration 4.0,
+usefulness 2.92, safety 4.31. Per-case issues are in `evals/manual_review.md`. Retrieval quality has not been measured on its own; the answer-level judge
+score is the only measure. No human or lawyer review has been done. (The judge script crashed once on unparseable JSON; it now retries 5 times.)
