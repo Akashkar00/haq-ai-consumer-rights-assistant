@@ -1,4 +1,15 @@
+import os
+
 import streamlit as st
+
+# Streamlit Cloud keeps keys in st.secrets, not .env. Copy them into the environment BEFORE importing haq
+# (haq.config's load_dotenv never overrides variables that are already set).
+try:
+    for _k, _v in st.secrets.items():
+        if isinstance(_v, (str, int, float, bool)):
+            os.environ.setdefault(str(_k), str(_v))
+except Exception:  # no secrets file locally: .env is used instead
+    pass
 
 from haq import policy
 from haq.llm.base import get_client
@@ -18,7 +29,16 @@ s: Session = st.session_state.session
 for role, msg in st.session_state.chat:
     st.chat_message(role).markdown(msg)
 
+MAX_USER_MESSAGES = int(os.getenv("MAX_USER_MESSAGES", "30"))  # per session, so a public link cannot run up the LLM bill
+if "n_user" not in st.session_state:
+    st.session_state.n_user = 0
+
 if prompt := st.chat_input("Describe your problem or reply here"):
+    if st.session_state.n_user >= MAX_USER_MESSAGES:
+        st.session_state.chat.append(("user", prompt))
+        st.session_state.chat.append(("assistant", "This session has reached its message limit. Please refresh the page to start a new one."))
+        st.rerun()
+    st.session_state.n_user += 1
     st.session_state.chat.append(("user", prompt))
     with st.spinner("Thinking..."):
         try:
