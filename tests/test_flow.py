@@ -220,3 +220,9 @@ def test_no_doubled_punctuation_after_citation_rewrite():
     chunks = [Chunk("S1", c.by_id["CPA2019-34"]), Chunk("S4", c.by_id["JUR2021-3"])]
     out = fix_limit_citations("Limit is fifty lakh rupees [S1], [S4], and more.", chunks)
     assert ",," not in out.replace(" ", "") and out.count("[") == 1
+
+
+def test_retrieval_eval_final_recall_is_complete_and_no_irrelevant_ecommerce():
+    from evals.retrieval_eval import run
+    res = run()
+    assert res["mean_final_recall"] == 1.0 and res["irrelevant_ecom_total"] == 0, res["rows"]

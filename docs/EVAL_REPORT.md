@@ -120,3 +120,17 @@ Hindi input (those are covered by the eval and stress scripts, not the UI).
 Automatic: rails on 13/13 (`20261121_015214_rails-on`), rails off 13/13 (`20261121_015814_rails-off`), no fallback calls. Judge on the final code: grounding 4.15, calibration 4.0,
 usefulness 2.92, safety 4.31. Per-case issues are in `evals/manual_review.md`. Retrieval quality has not been measured on its own; the answer-level judge
 score is the only measure. No human or lawyer review has been done. (The judge script crashed once on unparseable JSON; it now retries 5 times.)
+
+## Retrieval evaluation (no LLM) and final run
+
+`evals/retrieval_eval.py`: 7 scenarios, gold sets of needed entries written by me. BM25 alone: mean recall 0.75. With the required-entry rules: 1.00
+(partly by construction, since I wrote the rules from the same gold sets, so read it as a plumbing check). Irrelevant e-commerce entries on non-platform cases: 0.
+Retrieval is plain BM25 over 15 in-memory entries: no embedding model, no vector database.
+
+Final automatic runs after the retrieval fix: rails on 13/13 (`20261121_020721_rails-on`), rails off 13/13 (`20261121_021317_rails-off`).
+Judge: grounding 4.0, calibration 3.77, usefulness 3.08, safety 4.62.
+
+## Deployment
+
+Deployed on Streamlit Community Cloud (https://haq-consumer-rights-india.streamlit.app/, Anthropic Haiku as the model, 30-message cap per session). Checked in a browser on the live site:
+full journey (confirm, explanation with sources and timeline, draft with download button) and the urgent-case escalation. The live app was on the commit before the retrieval fix.

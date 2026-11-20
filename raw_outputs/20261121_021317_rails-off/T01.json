@@ -1,0 +1,76 @@
+{
+  "id": "T01",
+  "name": "Normal non-delivery refund dispute",
+  "turns": [
+    "I ordered headphones from QuickKart app on 5 October 2026 for Rs 3200 paid by UPI. Order id QK778812. Never delivered. I complained on 20 October 2026 in app chat, ticket TK5521, they said wait. I have the order screenshot and my bank statement.",
+    "yes",
+    "draft"
+  ],
+  "replies": [
+    "Here is what I understood:\n- Issue: non delivery\n- Seller/platform: QuickKart\n- Item/service: headphones\n- Order ID / date: QK778812 / 2026-10-05\n- Amount paid: Rs. 3,200\n- Earlier complaints: 1\n- Evidence: screenshot, bank_statement\n\nIs this correct? Reply 'yes' to continue, or tell me what to change.",
+    "You paid Rs 3,200 for headphones on QuickKart that were not delivered, and your follow-up via in-app chat only resulted in an instruction to wait. E-commerce platforms are required to provide a grievance redressal mechanism with an officer who must acknowledge complaints within forty-eight hours and redress them within one month [S6, S7]. In addition, consumers may file a complaint before the District Commission for amounts up to fifty lakh rupees within two years of the cause of action [S3, S4].\n\n**Proof of purchase**\nBefore you start, gather proof of the purchase. Without an invoice, a bank or UPI statement, the payment SMS or email, the order confirmation, or your chat with the seller can help show what you bought and paid.\n\n**Your timeline**\n- If your complaint of 20 October 2026 reached the platform's grievance officer, it should be resolved by 20 November 2026 [S6]. If it is not, move to the next step. (A message to the seller alone may not start this clock.)\n- Two years from your order date (05 October 2026) is 05 October 2028, which is 685 days from today (counting from 20 November 2026) [S3]. The limit runs from when the cause of action arose, which may be later (for example the promised delivery date), so treat this as a rough guide and check with an advocate if it is close.\n\n**Your options (in the usual order)**\n1. Write to the seller/platform grievance officer and keep the ticket number. For e-commerce entities the Rules require acknowledgement within 48 hours and resolution within one month [S6].\n2. If that does not work, register a grievance with the National Consumer Helpline (1915 or 1800114000) [S8].\n3. Optionally send a written legal notice. An advocate can draft this; I do not cover its legal content.\n4. File a complaint with the District Commission. The value limit is up to fifty lakh rupees [S4] and a complaint should be filed within two years of the cause of action [S3]. It may be filed electronically [S2].\n\n**More detail on these options**\n- Escalate the complaint to QuickKart's Grievance Officer: E-commerce entities must designate a grievance officer on their platform who is required to redress grievances within one month of receipt [S6, S7].\n- Register a complaint with the National Consumer Helpline: Grievances can be registered via the web portal, app, WhatsApp, or by calling 1915 or 1800114000, which NCH then forwards to the company for a resolution update [S8].\n- File a consumer complaint before the District Commission: A consumer can file a complaint with the prescribed fee, including by electronic filing, where the complainant resides or where the cause of action arose, for amounts up to fifty lakh rupees [S2, S4].\n\n**What I'm not sure about**\n- It is not specified whether QuickKart sold the item directly or operates as a marketplace with a third-party seller, which affects whether seller-specific rules apply [S5].\n- The case file does not state the original promised delivery date, making it unclear whether the situation falls under late delivery rules [S5].\n- The sources specify rules for late delivery, defective, deficient, or spurious goods, but they do not explicitly mention total non-delivery of an order [S5].\n- Your location is not mentioned in the case file, which is necessary to identify the local District Commission with jurisdiction [S1].\n- The specific remedy sought (such as a full refund or fulfillment of the order) is not specified in the case file.\n\nHaq gives general legal information based on the official sources shown. It is not a lawyer and this is not legal advice. Check the sources and consider consulting an advocate before taking formal action.\n\n**Sources**\n[S1] Consumer Protection Act, 2019 – jurisdiction of the District Commission – Section 34(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S2] Consumer Protection Act, 2019 – who may file a complaint and how – Section 35(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S3] Consumer Protection Act, 2019 – limitation period – Section 69(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n[S4] Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021 – District Commission value limit – Rule 3 – https://thc.nic.in/Central%20Governmental%20Rules/Consumer%20Protection%20(Jurisdiction%20of%20the%20District%20Commission,%20the%20State%20Commission%20and%20the%20National%20Commission)%20Rules,%202021.pdf (retrieved 2026-11-20, may change)\n[S5] Consumer Protection (E-Commerce) Rules, 2020 – seller duties on refusing returns and refunds – Rule 6(3) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20)\n[S6] Consumer Protection (E-Commerce) Rules, 2020 – grievance officer timelines – Rule 4(5) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S7] Consumer Protection (E-Commerce) Rules, 2020 – grievance mechanism and officer – Rule 4(4) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S8] National Consumer Helpline – how to register a grievance – consumerhelpline.gov.in home page – https://consumerhelpline.gov.in/ (retrieved 2026-11-20, may change)\n[S9] Consumer Protection Act, 2019 – definition of 'deficiency' – Section 2(11) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n\nWould you like a complaint letter drafted from these confirmed facts? (reply 'draft')",
+    "Here is your draft. Review every line before sending.\n\nTell me what to change, or say 'done'."
+  ],
+  "draft": "To,\nThe Grievance Officer\nQuickKart\n\nDate: 20 November 2026\n\nSubject: Complaint regarding non delivery – Order No. QK778812\n\nSir/Madam,\n\nI am writing to register a complaint about headphones, ordered on 05 October 2026, for which I paid Rs. 3,200 by UPI.\n\nFacts:\nOn 05 October 2026, I ordered headphones from QuickKart under order ID QK778812, paying an amount of INR 3200 via UPI. However, the ordered product was not delivered. On 20 October 2026, I submitted a complaint regarding the non-delivery through in-app chat under ticket ID TK5521. In response to my complaint, I was told to wait.\n\nEarlier complaints made by me:\n- 20 October 2026, via chat, ticket TK5521, response: they said wait\n\nRelief sought: a refund.\n\nI request you to acknowledge this complaint and resolve it within the time allowed. If it is not resolved, I may approach the National Consumer Helpline or the appropriate Consumer Commission.\n\nDocuments I can provide: screenshot, bank statement.\n\nYours faithfully,\n[Your name]\n[Your address, phone and email]\n\n---\nHaq gives general legal information based on the official sources shown. It is not a lawyer and this is not legal advice. Check the sources and consider consulting an advocate before taking formal action.\n",
+  "final_state": "REVIEW",
+  "flags": [],
+  "case_file": {
+    "issue_type": "non_delivery",
+    "opposite_party": {
+      "name": "QuickKart",
+      "type": "platform"
+    },
+    "platform": "QuickKart",
+    "product_or_service": "headphones",
+    "order_id": "QK778812",
+    "order_date": "2026-10-05",
+    "amount_paid_inr": 3200.0,
+    "payment_mode": "upi",
+    "timeline": [
+      {
+        "date": "2026-10-05",
+        "event": "Ordered headphones from QuickKart for Rs 3200 paid by UPI",
+        "source": "user"
+      },
+      {
+        "date": "2026-10-20",
+        "event": "Complained via in-app chat (Ticket TK5521); told to wait",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [
+      {
+        "date": "2026-10-20",
+        "channel": "chat",
+        "ticket_id": "TK5521",
+        "response": "they said wait"
+      }
+    ],
+    "no_complaint_yet": false,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "available": true
+      },
+      {
+        "type": "bank_statement",
+        "available": true
+      }
+    ],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": true
+  },
+  "checks": {
+    "final_state": true,
+    "contains:[S": true,
+    "contains:QK778812": true,
+    "contains:Sources": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 34.5,
+  "provider": "primary"
+}

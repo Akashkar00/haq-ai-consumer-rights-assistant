@@ -1,0 +1,90 @@
+{
+  "rows": [
+    {
+      "scenario": "T01 non-delivery, platform",
+      "gold": 8,
+      "bm25_recall": 0.75,
+      "final_recall": 1.0,
+      "missing_final": [],
+      "missing_bm25": [
+        "CPA2019-2-11",
+        "NCH-HOWTO"
+      ],
+      "irrelevant_ecom": []
+    },
+    {
+      "scenario": "T02 damaged, platform",
+      "gold": 8,
+      "bm25_recall": 0.625,
+      "final_recall": 1.0,
+      "missing_final": [],
+      "missing_bm25": [
+        "CPA2019-2-10",
+        "ECOM2020-6-3",
+        "NCH-HOWTO"
+      ],
+      "irrelevant_ecom": []
+    },
+    {
+      "scenario": "T03 cancelled, no refund, platform",
+      "gold": 8,
+      "bm25_recall": 0.625,
+      "final_recall": 1.0,
+      "missing_final": [],
+      "missing_bm25": [
+        "CPA2019-2-11",
+        "ECOM2020-4-10",
+        "NCH-HOWTO"
+      ],
+      "irrelevant_ecom": []
+    },
+    {
+      "scenario": "T04 defective, local shop",
+      "gold": 6,
+      "bm25_recall": 1.0,
+      "final_recall": 1.0,
+      "missing_final": [],
+      "missing_bm25": [],
+      "irrelevant_ecom": []
+    },
+    {
+      "scenario": "T06 non-delivery, platform, 5 tickets",
+      "gold": 8,
+      "bm25_recall": 0.75,
+      "final_recall": 1.0,
+      "missing_final": [],
+      "missing_bm25": [
+        "CPA2019-2-11",
+        "NCH-HOWTO"
+      ],
+      "irrelevant_ecom": []
+    },
+    {
+      "scenario": "T12 high value, seller",
+      "gold": 7,
+      "bm25_recall": 0.8571428571428571,
+      "final_recall": 1.0,
+      "missing_final": [],
+      "missing_bm25": [
+        "JUR2021-4"
+      ],
+      "irrelevant_ecom": []
+    },
+    {
+      "scenario": "T13 cancelled, platform (Hinglish)",
+      "gold": 8,
+      "bm25_recall": 0.625,
+      "final_recall": 1.0,
+      "missing_final": [],
+      "missing_bm25": [
+        "CPA2019-2-11",
+        "ECOM2020-4-10",
+        "NCH-HOWTO"
+      ],
+      "irrelevant_ecom": []
+    }
+  ],
+  "mean_bm25_recall": 0.7474489795918366,
+  "mean_final_recall": 1.0,
+  "irrelevant_ecom_total": 0
+}

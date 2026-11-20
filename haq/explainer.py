@@ -11,6 +11,16 @@ from haq.llm.base import parse_json
 from haq.schema import CaseFile, Explanation
 
 _LADDER_IDS = ["NCH-HOWTO", "JUR2021-3", "CPA2019-69", "CPA2019-35"]
+# Hand-written, per issue type: entries a good answer needs even when BM25 ranks them below the top 7.
+# BM25 alone missed these in the retrieval eval (evals/retrieval_eval.py).
+_ISSUE_REQUIRED = {
+    "non_delivery": ["CPA2019-2-11"], "cancelled_not_refunded": ["CPA2019-2-11"], "return_refused": ["CPA2019-2-11"],
+    "damaged_item": ["CPA2019-2-10"], "defective_item": ["CPA2019-2-10"], "wrong_item": ["CPA2019-2-10"],
+}
+_ISSUE_REQUIRED_PLATFORM = {
+    "non_delivery": ["ECOM2020-6-3"], "cancelled_not_refunded": ["ECOM2020-4-10"], "return_refused": ["ECOM2020-6-3", "ECOM2020-4-10"],
+    "damaged_item": ["ECOM2020-6-3"], "defective_item": ["ECOM2020-6-3"], "wrong_item": ["ECOM2020-6-3"],
+}
 _HIGH_VALUE_IDS = ["JUR2021-4", "JUR2021-5"]
 STATE_LIMIT_INR = 20_000_000  # two crore, from JUR2021-4/5 (volatile)
 _ECOM_LADDER_IDS = ["ECOM2020-4-5"]  # only for purchases made through a platform
@@ -174,17 +184,26 @@ def _llm_explanation(llm, messages) -> Explanation:
                        uncertainties=["The automatic explanation step failed; please check the sources directly."])
 
 
-def explain(llm, corpus: Corpus, case: CaseFile, today: date) -> ExplainResult:
+def retrieve_for_case(corpus: Corpus, case: CaseFile, bm25_only: bool = False) -> list[Chunk]:
+    """BM25 retrieval, plus the entries the options ladder cites (unless bm25_only, used to measure BM25 alone)."""
     issue = case.issue_type.value if case.issue_type else None
     query = " ".join(filter(None, [issue and issue.replace("_", " "), case.product_or_service, case.remedy_sought,
                                    "refund consumer complaint e-commerce grievance"]))
     on_platform = bool(case.platform)  # the E-Commerce Rules apply to platform purchases, not a local shop
     chunks = corpus.retrieve(query, issue, k=7, exclude_tag=None if on_platform else "ecommerce")
+    if bm25_only:
+        return chunks
     have = {c.entry["id"] for c in chunks}
     high_value = bool(case.amount_paid_inr and case.amount_paid_inr > DISTRICT_LIMIT_INR)
-    for eid in _LADDER_IDS + (_ECOM_LADDER_IDS if on_platform else []) + (_HIGH_VALUE_IDS if high_value else []):  # the options ladder cites these, so they must be in the retrieved set
+    required = _ISSUE_REQUIRED.get(issue, []) + (_ISSUE_REQUIRED_PLATFORM.get(issue, []) if on_platform else [])
+    for eid in _LADDER_IDS + (_ECOM_LADDER_IDS if on_platform else []) + required + (_HIGH_VALUE_IDS if high_value else []):
         if eid not in have:
             chunks.append(Chunk(f"S{len(chunks) + 1}", corpus.by_id[eid]))
+    return chunks
+
+
+def explain(llm, corpus: Corpus, case: CaseFile, today: date) -> ExplainResult:
+    chunks = retrieve_for_case(corpus, case)
     messages = [
         {"role": "system", "content": (PROMPTS / "explain.md").read_text()},
         {"role": "user", "content": f"CASE FILE:\n{case.model_dump_json()}\n\nSOURCES:\n{_render_chunks(chunks)}"}]
