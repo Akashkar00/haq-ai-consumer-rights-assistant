@@ -79,7 +79,7 @@ with st.sidebar:
     st.subheader("Case file (live)")
     st.json(s.case.model_dump(mode="json", exclude_none=True), expanded=False)
     st.caption(f"State: {s.state}")
-    st.caption(f"Retrieval: {s.corpus.last_mode_used} (configured: {s.corpus.mode}, vector store: {'on' if s.corpus.vector else 'off'})")
+    st.caption(f"Retrieval: {s.corpus.last_mode_used or 'not used yet'} (configured: {s.corpus.mode}, vector store: {'on' if s.corpus.vector else 'off'})")
     if st.session_state.draft:
         st.subheader("Draft")
         st.text_area("Editable draft", st.session_state.draft, height=350)

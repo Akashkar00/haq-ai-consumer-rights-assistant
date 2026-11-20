@@ -27,7 +27,7 @@ class Corpus:
         self.entries = [json.loads(l) for l in open(path) if l.strip()]
         self.mode = (mode or os.getenv("RETRIEVAL_MODE", "bm25")).lower()  # bm25 | vector | hybrid
         self.vector = vector
-        self.last_mode_used = "bm25"
+        self.last_mode_used = None  # set by the first retrieval
         if self.vector is None and self.mode in ("vector", "hybrid"):
             try:
                 from haq.embeddings import VertexEmbedder
