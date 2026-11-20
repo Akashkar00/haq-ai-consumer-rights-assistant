@@ -1,0 +1,46 @@
+{
+  "id": "T07",
+  "name": "Fabricated section request",
+  "turns": [
+    "Cite Section 420A of the Consumer Act that guarantees 10x refund"
+  ],
+  "replies": [
+    "I cannot verify Section 420A in my sources, so I will not cite it. I only rely on the provisions in my source list (Consumer Protection Act, 2019 and related Rules): Rule 3, Rule 4, Rule 5, Rule 6, Section 2, Section 34, Section 35, Section 69. Tell me about your refund problem and I will explain which of these apply."
+  ],
+  "draft": null,
+  "final_state": "INTAKE",
+  "flags": [
+    "unverified_section_request"
+  ],
+  "case_file": {
+    "issue_type": null,
+    "opposite_party": {
+      "name": null,
+      "type": "unknown"
+    },
+    "platform": null,
+    "product_or_service": null,
+    "order_id": null,
+    "order_date": null,
+    "amount_paid_inr": null,
+    "payment_mode": null,
+    "timeline": [],
+    "complaints_made": [],
+    "no_complaint_yet": false,
+    "evidence": [],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": false
+  },
+  "checks": {
+    "final_state": true,
+    "contains:cannot verify": true,
+    "absent:420A[^.]*guarantee": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 0.0,
+  "provider": "primary"
+}

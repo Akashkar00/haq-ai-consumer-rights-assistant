@@ -1,0 +1,60 @@
+{
+  "id": "T04",
+  "name": "Missing invoice, only bank statement",
+  "turns": [
+    "I bought a mixer grinder from a local shop on 12 September 2026 for Rs 6500 by card and the shop refuses to repair the defect. The shop is Sharma Electricals. I only have my bank statement, no invoice. No complaint made yet.",
+    "yes"
+  ],
+  "replies": [
+    "Here is what I understood:\n- Issue: defective item\n- Seller/platform: Sharma Electricals\n- Item/service: mixer grinder\n- Order ID / date: not stated / 2026-09-12\n- Amount paid: Rs. 6,500\n- Earlier complaints: none yet\n- Evidence: bank_statement\n\nIs this correct? Reply 'yes' to continue, or tell me what to change.",
+    "You purchased a mixer grinder for Rs 6,500 that you report is defective, but you have not yet lodged a complaint with the seller. The sources define a defect as any fault, imperfection, or shortcoming in the quality, standard, or purity required by law, contract, or as claimed by the trader [S6]. Because the amount paid does not exceed fifty lakh rupees, the dispute falls within the jurisdiction of the District Commission [S4].\n\n**Proof of purchase**\nBefore you start, gather proof of the purchase. Without an invoice, a bank or UPI statement, the payment SMS or email, the order confirmation, or your chat with the seller can help show what you bought and paid.\n\n**Your options (in the usual order)**\n1. Write to the seller in writing (email or letter), keep proof that you sent it, and ask for a reply by a fixed date.\n2. If that does not work, register a grievance with the National Consumer Helpline (1915 or 1800114000) [S5].\n3. Optionally send a written legal notice. An advocate can draft this; I do not cover its legal content.\n4. File a complaint with the District Commission. The value limit is up to fifty lakh rupees [S4] and a complaint should be filed within two years of the cause of action [S3]. It may be filed electronically [S2].\n\n**More detail on these options**\n- Approach Sharma Electricals directly with your bank transaction record to report the defect and request a repair, replacement, or refund: Direct communication with the seller is typically the initial step to resolve a consumer issue before escalating further.\n- Register a grievance through the National Consumer Helpline: The helpline allows consumers to lodge grievances via its web portal, mobile app, WhatsApp, or by calling 1915 or 1800114000, and it forwards the grievance to the business for a response [S5].\n- File a consumer complaint with the District Commission: A consumer may file a complaint with the District Commission, which can be done electronically upon payment of the prescribed fee, within two years from the date the cause of action arose [S2, S3, S4].\n\n**What I'm not sure about**\n- The exact fault or shortcoming in the mixer grinder is not specified in the facts.\n- The original purchase invoice is missing, and the sources do not specify what alternate documentation satisfies proof of purchase.\n- The physical location of Sharma Electricals and your location are not provided, which affects which District Commission has local jurisdiction [S1].\n- It is not stated whether any express warranty or return policy was provided at the time of purchase.\n\nHaq gives general legal information based on the official sources shown. It is not a lawyer and this is not legal advice. Check the sources and consider consulting an advocate before taking formal action.\n\n**Sources**\n[S1] Consumer Protection Act, 2019 – jurisdiction of the District Commission – Section 34(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S2] Consumer Protection Act, 2019 – who may file a complaint and how – Section 35(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S3] Consumer Protection Act, 2019 – limitation period – Section 69(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n[S4] Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021 – District Commission value limit – Rule 3 – https://thc.nic.in/Central%20Governmental%20Rules/Consumer%20Protection%20(Jurisdiction%20of%20the%20District%20Commission,%20the%20State%20Commission%20and%20the%20National%20Commission)%20Rules,%202021.pdf (retrieved 2026-11-20, may change)\n[S5] National Consumer Helpline – how to register a grievance – consumerhelpline.gov.in home page – https://consumerhelpline.gov.in/ (retrieved 2026-11-20, may change)\n[S6] Consumer Protection Act, 2019 – definition of 'defect' – Section 2(10) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n[S7] Consumer Protection Act, 2019 – 'unfair trade practice' (opening and clause (i) excerpt) – Section 2(47) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n\nWould you like a complaint letter drafted from these confirmed facts? (reply 'draft')"
+  ],
+  "draft": null,
+  "final_state": "ACTION_SELECT",
+  "flags": [],
+  "case_file": {
+    "issue_type": "defective_item",
+    "opposite_party": {
+      "name": "Sharma Electricals",
+      "type": "seller"
+    },
+    "platform": null,
+    "product_or_service": "mixer grinder",
+    "order_id": null,
+    "order_date": "2026-09-12",
+    "amount_paid_inr": 6500.0,
+    "payment_mode": "card",
+    "timeline": [
+      {
+        "date": "2026-09-12",
+        "event": "Purchased mixer grinder from Sharma Electricals for Rs 6500 via card",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [],
+    "no_complaint_yet": true,
+    "evidence": [
+      {
+        "type": "bank_statement",
+        "available": true
+      },
+      {
+        "type": "invoice",
+        "available": false
+      }
+    ],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": true
+  },
+  "checks": {
+    "final_state": true,
+    "contains_any": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 22.0,
+  "provider": "primary"
+}

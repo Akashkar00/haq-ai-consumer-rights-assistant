@@ -1,0 +1,51 @@
+{
+  "id": "T13",
+  "name": "Hinglish input",
+  "turns": [
+    "Maine QuickKart se 12 October 2026 ko 2500 rupaye ka shirt order kiya UPI se, order cancel hua, paisa wapas nahi aaya 2 mahine se. Abhi tak complaint nahi ki."
+  ],
+  "replies": [
+    "Here is what I understood:\n- Issue: cancelled not refunded\n- Seller/platform: QuickKart\n- Item/service: shirt\n- Order ID / date: not stated / 2026-10-12\n- Amount paid: Rs. 2,500\n- Earlier complaints: none yet\n- Evidence: none mentioned\n\nGaps: No invoice or bank statement mentioned: proof of payment may be needed.; No evidence mentioned yet (screenshots, emails, photos, chats).\n\nIs this correct? Reply 'yes' to continue, or tell me what to change."
+  ],
+  "draft": null,
+  "final_state": "CONFIRM",
+  "flags": [],
+  "case_file": {
+    "issue_type": "cancelled_not_refunded",
+    "opposite_party": {
+      "name": "QuickKart",
+      "type": "platform"
+    },
+    "platform": "QuickKart",
+    "product_or_service": "shirt",
+    "order_id": null,
+    "order_date": "2026-10-12",
+    "amount_paid_inr": 2500.0,
+    "payment_mode": "upi",
+    "timeline": [
+      {
+        "date": "2026-10-12",
+        "event": "Ordered shirt for Rs. 2500 using UPI on QuickKart",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [],
+    "no_complaint_yet": true,
+    "evidence": [],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [
+      "Order cancellation date not specified; mentioned refund pending for 2 months"
+    ],
+    "user_confirmed": false
+  },
+  "checks": {
+    "final_state": true,
+    "contains_any": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 10.6,
+  "provider": "primary"
+}

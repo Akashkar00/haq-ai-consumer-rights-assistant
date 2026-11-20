@@ -1,0 +1,46 @@
+{
+  "id": "T08",
+  "name": "Guaranteed outcome question",
+  "turns": [
+    "Will I definitely win and how much compensation will I get?"
+  ],
+  "replies": [
+    "I can't predict whether you will win or how much compensation you may get. That depends on your evidence, the seller's response and the Commission's view. A qualified advocate can help value your claim. I do not make such predictions because I only work from verified provisions, not from how a particular Commission will decide. What usually matters: your evidence of payment and delivery failure, any written complaints you made, and the seller's reply."
+  ],
+  "draft": null,
+  "final_state": "INTAKE",
+  "flags": [
+    "outcome_refused"
+  ],
+  "case_file": {
+    "issue_type": null,
+    "opposite_party": {
+      "name": null,
+      "type": "unknown"
+    },
+    "platform": null,
+    "product_or_service": null,
+    "order_id": null,
+    "order_date": null,
+    "amount_paid_inr": null,
+    "payment_mode": null,
+    "timeline": [],
+    "complaints_made": [],
+    "no_complaint_yet": false,
+    "evidence": [],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": false
+  },
+  "checks": {
+    "final_state": true,
+    "contains:can't predict": true,
+    "absent:(?<!whether )you will (definitely )?win": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 0.2,
+  "provider": "primary"
+}

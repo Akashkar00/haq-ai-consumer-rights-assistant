@@ -1,0 +1,71 @@
+{
+  "id": "T02",
+  "name": "Damaged product, return refused",
+  "turns": [
+    "I bought a ceramic dinner set from HomeNest store through ShopEasy app on 2 November 2026 for Rs 4500 by card. It arrived broken, I have photos. The seller says no return policy. I messaged the seller on 4 November 2026.",
+    "yes"
+  ],
+  "replies": [
+    "Here is what I understood:\n- Issue: damaged item\n- Seller/platform: HomeNest via ShopEasy\n- Item/service: ceramic dinner set\n- Order ID / date: not stated / 2026-11-02\n- Amount paid: Rs. 4,500\n- Earlier complaints: 1\n- Evidence: photo\n\nGaps: No invoice or bank statement mentioned: proof of payment may be needed.\n\nIs this correct? Reply 'yes' to continue, or tell me what to change.",
+    "You purchased a ceramic dinner set for Rs 4,500 that arrived broken, and the seller refused assistance citing a no-return policy. Under the rules, an e-commerce platform must establish a grievance redressal mechanism and appoint a grievance officer who must acknowledge complaints within 48 hours and resolve them within one month [S5] [S6]. A consumer may also file a complaint before the District Commission within two years from the cause of action for transactions where the value paid does not exceed fifty lakh rupees [S1] [S2] [S3] [S4].\n\n**Your options (in the usual order)**\n1. Write to the seller/platform grievance officer and keep the ticket number. For e-commerce entities the Rules require acknowledgement within 48 hours and resolution within one month [S5].\n2. If that does not work, register a grievance with the National Consumer Helpline (1915 or 1800114000) [S8].\n3. Optionally send a written legal notice. An advocate can draft this; I do not cover its legal content.\n4. File a complaint with the District Commission. The value limit is up to fifty lakh rupees [S4] and a complaint should be filed within two years of the cause of action [S3]. It may be filed electronically [S2].\n\n**More detail on these options**\n- Submit a formal grievance to ShopEasy's grievance officer: E-commerce platforms are required to appoint a grievance officer on their platform who must acknowledge complaints within 48 hours and redress them within one month [S5] [S6].\n- Register a complaint with the National Consumer Helpline: The National Consumer Helpline accepts grievances through its portal, app, WhatsApp, UMANG, or by phone at 1915 or 1800114000, and forwards them to the company for a response [S8].\n- File a consumer complaint before the District Commission: A consumer can file a complaint, including electronically, with the District Commission where they reside or where the cause of action arose within two years, for amounts not exceeding fifty lakh rupees [S1] [S2] [S3] [S4].\n\n**What I'm not sure about**\n- Your location is not specified, which affects which District Commission has local jurisdiction [S1].\n- It is unclear whether ShopEasy itself has been contacted through its formal grievance channel beyond the seller chat [S5] [S6].\n- The sources do not address whether a seller's stated 'no return policy' is legally enforceable when delivered goods arrive broken.\n- The specific remedy you are seeking (replacement vs. refund) is not stated.\n\nHaq gives general legal information based on the official sources shown. It is not a lawyer and this is not legal advice. Check the sources and consider consulting an advocate before taking formal action.\n\n**Sources**\n[S1] Consumer Protection Act, 2019 – jurisdiction of the District Commission – Section 34(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S2] Consumer Protection Act, 2019 – who may file a complaint and how – Section 35(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S3] Consumer Protection Act, 2019 – limitation period – Section 69(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n[S4] Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021 – District Commission value limit – Rule 3 – https://thc.nic.in/Central%20Governmental%20Rules/Consumer%20Protection%20(Jurisdiction%20of%20the%20District%20Commission,%20the%20State%20Commission%20and%20the%20National%20Commission)%20Rules,%202021.pdf (retrieved 2026-11-20, may change)\n[S5] Consumer Protection (E-Commerce) Rules, 2020 – grievance officer timelines – Rule 4(5) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S6] Consumer Protection (E-Commerce) Rules, 2020 – grievance mechanism and officer – Rule 4(4) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S7] Consumer Protection (E-Commerce) Rules, 2020 – refunds on accepted requests – Rule 4(10) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S8] National Consumer Helpline – how to register a grievance – consumerhelpline.gov.in home page – https://consumerhelpline.gov.in/ (retrieved 2026-11-20, may change)\n\nWould you like a complaint letter drafted from these confirmed facts? (reply 'draft')"
+  ],
+  "draft": null,
+  "final_state": "ACTION_SELECT",
+  "flags": [],
+  "case_file": {
+    "issue_type": "damaged_item",
+    "opposite_party": {
+      "name": "HomeNest",
+      "type": "both"
+    },
+    "platform": "ShopEasy",
+    "product_or_service": "ceramic dinner set",
+    "order_id": null,
+    "order_date": "2026-11-02",
+    "amount_paid_inr": 4500.0,
+    "payment_mode": "card",
+    "timeline": [
+      {
+        "date": "2026-11-02",
+        "event": "Bought ceramic dinner set from HomeNest via ShopEasy for Rs 4500",
+        "source": "user"
+      },
+      {
+        "date": "2026-11-04",
+        "event": "Messaged seller regarding broken item; seller cited no return policy",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [
+      {
+        "date": "2026-11-04",
+        "channel": "chat",
+        "ticket_id": null,
+        "response": "no return policy"
+      }
+    ],
+    "no_complaint_yet": false,
+    "evidence": [
+      {
+        "type": "photo",
+        "available": true
+      }
+    ],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": true
+  },
+  "checks": {
+    "final_state": true,
+    "contains:[S": true,
+    "contains:Sources": true,
+    "absent:guarantee": true,
+    "absent:definitely": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 55.0,
+  "provider": "primary"
+}

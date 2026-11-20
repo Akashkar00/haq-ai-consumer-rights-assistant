@@ -1,0 +1,113 @@
+{
+  "id": "T06",
+  "name": "Repeated complaints over months",
+  "turns": [
+    "I ordered a phone from QuickKart on 3 August 2026 for Rs 15000 by netbanking, order QK10101, it never arrived. I raised tickets TK1 on 10 August 2026, TK2 on 25 August 2026, TK3 on 10 September 2026, TK4 on 1 October 2026 and TK5 on 15 October 2026; all closed without a refund. I have screenshots of all.",
+    "yes"
+  ],
+  "replies": [
+    "Here is what I understood:\n- Issue: non delivery\n- Seller/platform: QuickKart\n- Item/service: phone\n- Order ID / date: QK10101 / 2026-08-03\n- Amount paid: Rs. 15,000\n- Earlier complaints: 5\n- Evidence: screenshot\n\nGaps: No invoice or bank statement mentioned: proof of payment may be needed.\n\nIs this correct? Reply 'yes' to continue, or tell me what to change.",
+    "You paid Rs 15,000 for a phone on QuickKart that was not delivered, and your five support tickets were closed without a refund. Under the rules, e-commerce entities must provide a grievance officer to redress consumer complaints within one month [S6] [S7]. In addition, a consumer may file a complaint with a District Commission when goods or services involve an amount not exceeding fifty lakh rupees [S2] [S4].\n\n**Proof of purchase**\nBefore you start, gather proof of the purchase. Without an invoice, a bank or UPI statement, the payment SMS or email, the order confirmation, or your chat with the seller can help show what you bought and paid.\n\n**Your timeline**\n- If your complaint of 10 August 2026 reached the platform's grievance officer, the one-month period ended on 10 September 2026 [S6]. As of 20 November 2026 that date has passed, so you can move to the next step.\n- Two years from your order date (03 August 2026) is 03 August 2028, which is 622 days from today (counting from 20 November 2026) [S3]. The limit runs from when the cause of action arose, which may be later (for example the promised delivery date), so treat this as a rough guide and check with an advocate if it is close.\n\n**Your options (in the usual order)**\n1. Write to the seller/platform grievance officer and keep the ticket number. For e-commerce entities the Rules require acknowledgement within 48 hours and resolution within one month [S6]. You have already complained 5 times; if those were closed without a resolution, you can move straight to the next step instead of repeating this one.\n2. If that does not work, register a grievance with the National Consumer Helpline (1915 or 1800114000) [S8].\n3. Optionally send a written legal notice. An advocate can draft this; I do not cover its legal content.\n4. File a complaint with the District Commission. The value limit is up to fifty lakh rupees [S4] and a complaint should be filed within two years of the cause of action [S3]. It may be filed electronically [S2].\n\n**More detail on these options**\n- Escalate the issue to QuickKart's grievance officer: The rules require every e-commerce entity to appoint a grievance officer whose details are displayed on its platform, and who must acknowledge a complaint within forty-eight hours and redress it within one month [S6] [S7].\n- Register a grievance with the National Consumer Helpline: You can lodge a grievance through the portal, mobile app, UMANG, WhatsApp, or by calling 1915 or 1800114000, and the helpline forwards it to the company for a response [S8].\n- File a complaint before the District Commission: A consumer can file a complaint, including electronically with a prescribed fee, where the value paid does not exceed fifty lakh rupees, within two years from when the cause of action arose [S2, S3, S4].\n\n**What I'm not sure about**\n- It is unclear whether the seller rule on refusing refunds for goods delivered late covers complete non-delivery, as the rule text specifically refers to goods delivered late from the stated schedule [S5].\n- The case file does not indicate whether QuickKart was the seller itself or a marketplace entity connecting you with a third-party seller.\n- Your residential or work location and QuickKart's branch locations are missing, which determines which District Commission has local territorial jurisdiction [S1].\n- The specific remedy you are seeking is not mentioned in the case file.\n\nHaq gives general legal information based on the official sources shown. It is not a lawyer and this is not legal advice. Check the sources and consider consulting an advocate before taking formal action.\n\n**Sources**\n[S1] Consumer Protection Act, 2019 – jurisdiction of the District Commission – Section 34(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S2] Consumer Protection Act, 2019 – who may file a complaint and how – Section 35(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S3] Consumer Protection Act, 2019 – limitation period – Section 69(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n[S4] Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021 – District Commission value limit – Rule 3 – https://thc.nic.in/Central%20Governmental%20Rules/Consumer%20Protection%20(Jurisdiction%20of%20the%20District%20Commission,%20the%20State%20Commission%20and%20the%20National%20Commission)%20Rules,%202021.pdf (retrieved 2026-11-20, may change)\n[S5] Consumer Protection (E-Commerce) Rules, 2020 – seller duties on refusing returns and refunds – Rule 6(3) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20)\n[S6] Consumer Protection (E-Commerce) Rules, 2020 – grievance officer timelines – Rule 4(5) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S7] Consumer Protection (E-Commerce) Rules, 2020 – grievance mechanism and officer – Rule 4(4) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S8] National Consumer Helpline – how to register a grievance – consumerhelpline.gov.in home page – https://consumerhelpline.gov.in/ (retrieved 2026-11-20, may change)\n[S9] Consumer Protection Act, 2019 – definition of 'deficiency' – Section 2(11) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n\nWould you like a complaint letter drafted from these confirmed facts? (reply 'draft')"
+  ],
+  "draft": null,
+  "final_state": "ACTION_SELECT",
+  "flags": [],
+  "case_file": {
+    "issue_type": "non_delivery",
+    "opposite_party": {
+      "name": "QuickKart",
+      "type": "platform"
+    },
+    "platform": "QuickKart",
+    "product_or_service": "phone",
+    "order_id": "QK10101",
+    "order_date": "2026-08-03",
+    "amount_paid_inr": 15000.0,
+    "payment_mode": "netbanking",
+    "timeline": [
+      {
+        "date": "2026-08-03",
+        "event": "Ordered phone from QuickKart for Rs 15000 via netbanking",
+        "source": "user"
+      },
+      {
+        "date": "2026-08-10",
+        "event": "Raised ticket TK1; closed without a refund",
+        "source": "user"
+      },
+      {
+        "date": "2026-08-25",
+        "event": "Raised ticket TK2; closed without a refund",
+        "source": "user"
+      },
+      {
+        "date": "2026-09-10",
+        "event": "Raised ticket TK3; closed without a refund",
+        "source": "user"
+      },
+      {
+        "date": "2026-10-01",
+        "event": "Raised ticket TK4; closed without a refund",
+        "source": "user"
+      },
+      {
+        "date": "2026-10-15",
+        "event": "Raised ticket TK5; closed without a refund",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [
+      {
+        "date": "2026-08-10",
+        "channel": null,
+        "ticket_id": "TK1",
+        "response": "closed without a refund"
+      },
+      {
+        "date": "2026-08-25",
+        "channel": null,
+        "ticket_id": "TK2",
+        "response": "closed without a refund"
+      },
+      {
+        "date": "2026-09-10",
+        "channel": null,
+        "ticket_id": "TK3",
+        "response": "closed without a refund"
+      },
+      {
+        "date": "2026-10-01",
+        "channel": null,
+        "ticket_id": "TK4",
+        "response": "closed without a refund"
+      },
+      {
+        "date": "2026-10-15",
+        "channel": null,
+        "ticket_id": "TK5",
+        "response": "closed without a refund"
+      }
+    ],
+    "no_complaint_yet": false,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "available": true
+      }
+    ],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": true
+  },
+  "checks": {
+    "final_state": true,
+    "contains:Helpline": true,
+    "contains:[S": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 71.6,
+  "provider": "primary"
+}

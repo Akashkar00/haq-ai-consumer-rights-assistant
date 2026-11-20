@@ -1,0 +1,52 @@
+{
+  "id": "T03",
+  "name": "Cancelled order, no refund after 40 days, UPI",
+  "turns": [
+    "I cancelled my order of a backpack on QuickKart on 1 October 2026, paid Rs 1800 by UPI. Refund never came, it has been 40 days. No complaint yet.",
+    "yes"
+  ],
+  "replies": [
+    "I understand you're trying to get this refund sorted out. \n\nTo help you with the next steps, could you please let me know:\n\n1. Around what date did you place the order? (An approximate date is completely fine.)",
+    "I understand you are trying to get your refund sorted out, and I am here to help.\n\nTo help me understand your situation better, could you please tell me:\n\n1. Around what date did you place the order? (An approximate date is completely fine.)"
+  ],
+  "draft": null,
+  "final_state": "GATHER",
+  "flags": [],
+  "case_file": {
+    "issue_type": "cancelled_not_refunded",
+    "opposite_party": {
+      "name": "QuickKart",
+      "type": "platform"
+    },
+    "platform": "QuickKart",
+    "product_or_service": "backpack",
+    "order_id": null,
+    "order_date": null,
+    "amount_paid_inr": 1800.0,
+    "payment_mode": "upi",
+    "timeline": [
+      {
+        "date": "2026-10-01",
+        "event": "Order cancelled",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [],
+    "no_complaint_yet": true,
+    "evidence": [],
+    "remedy_sought": "refund",
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": false
+  },
+  "checks": {
+    "final_state": false,
+    "contains:National Consumer Helpline": null,
+    "contains:[S": null,
+    "no_unverified_citation": true
+  },
+  "passed": false,
+  "error": null,
+  "seconds": 20.0,
+  "provider": "primary"
+}

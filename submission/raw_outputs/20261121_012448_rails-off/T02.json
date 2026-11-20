@@ -1,0 +1,71 @@
+{
+  "id": "T02",
+  "name": "Damaged product, return refused",
+  "turns": [
+    "I bought a ceramic dinner set from HomeNest store through ShopEasy app on 2 November 2026 for Rs 4500 by card. It arrived broken, I have photos. The seller says no return policy. I messaged the seller on 4 November 2026.",
+    "yes"
+  ],
+  "replies": [
+    "Here is what I understood:\n- Issue: damaged item\n- Seller/platform: HomeNest via ShopEasy\n- Item/service: ceramic dinner set\n- Order ID / date: not stated / 2026-11-02\n- Amount paid: Rs. 4,500\n- Earlier complaints: 1\n- Evidence: photo\n\nGaps: No invoice or bank statement mentioned: proof of payment may be needed.\n\nIs this correct? Reply 'yes' to continue, or tell me what to change.",
+    "You purchased a ceramic dinner set for Rs 4,500 via ShopEasy from HomeNest, but it arrived broken and the seller refused assistance citing a no return policy. Under applicable rules, e-commerce entities must establish a grievance mechanism with a designated grievance officer on their platform [S6], who must acknowledge complaints within forty-eight hours and resolve them within one month [S5]. Additionally, a consumer may file a complaint before the District Commission for paid values up to fifty lakh rupees within two years from when the cause of action arose [S2, S3, S4].\n\n**Proof of purchase**\nBefore you start, gather proof of the purchase. Without an invoice, a bank or UPI statement, the payment SMS or email, the order confirmation, or your chat with the seller can help show what you bought and paid.\n\n**Your options (in the usual order)**\n1. Write to the seller/platform grievance officer and keep the ticket number. For e-commerce entities the Rules require acknowledgement within 48 hours and resolution within one month [S5].\n2. If that does not work, register a grievance with the National Consumer Helpline (1915 or 1800114000) [S8].\n3. Optionally send a written legal notice. An advocate can draft this; I do not cover its legal content.\n4. File a complaint with the District Commission. The value limit is up to fifty lakh rupees [S4] and a complaint should be filed within two years of the cause of action [S3]. It may be filed electronically [S2].\n\n**More detail on these options**\n- Lodge a formal grievance with ShopEasy's Grievance Officer: Every e-commerce entity is required to maintain a grievance redressal mechanism with an appointed officer whose details are displayed on the platform [S6], and this officer must acknowledge the complaint within forty-eight hours and resolve it within one month [S5].\n- Register a complaint with the National Consumer Helpline (NCH): You can lodge a grievance via the NCH web portal, mobile app, UMANG, WhatsApp, or by calling 1915 or 1800114000, and NCH will forward the matter to the concerned company for review and resolution [S8].\n- File a consumer complaint with the District Commission: A consumer may file a complaint, including by electronic means accompanied by the prescribed fee, for goods sold where the value paid does not exceed fifty lakh rupees, provided it is filed within two years of the cause of action [S2, S4, S3].\n\n**What I'm not sure about**\n- The case file does not indicate your location or the location where the opposite parties reside or carry on business, which affects which District Commission has territorial jurisdiction [S1].\n- The specific remedy sought (such as a replacement or a monetary refund) is not stated in the case file.\n- The provided sources do not specifically cover the legality or applicability of a seller's 'no return policy' when goods are delivered damaged.\n- While an e-commerce entity must pay accepted refund requests within a reasonable period [S7], it is unclear whether a refund request will be accepted since the seller refused the initial chat request.\n\nHaq gives general legal information based on the official sources shown. It is not a lawyer and this is not legal advice. Check the sources and consider consulting an advocate before taking formal action.\n\n**Sources**\n[S1] Consumer Protection Act, 2019 – jurisdiction of the District Commission – Section 34(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S2] Consumer Protection Act, 2019 – who may file a complaint and how – Section 35(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S3] Consumer Protection Act, 2019 – limitation period – Section 69(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n[S4] Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021 – District Commission value limit – Rule 3 – https://thc.nic.in/Central%20Governmental%20Rules/Consumer%20Protection%20(Jurisdiction%20of%20the%20District%20Commission,%20the%20State%20Commission%20and%20the%20National%20Commission)%20Rules,%202021.pdf (retrieved 2026-11-20, may change)\n[S5] Consumer Protection (E-Commerce) Rules, 2020 – grievance officer timelines – Rule 4(5) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S6] Consumer Protection (E-Commerce) Rules, 2020 – grievance mechanism and officer – Rule 4(4) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S7] Consumer Protection (E-Commerce) Rules, 2020 – refunds on accepted requests – Rule 4(10) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S8] National Consumer Helpline – how to register a grievance – consumerhelpline.gov.in home page – https://consumerhelpline.gov.in/ (retrieved 2026-11-20, may change)\n\nWould you like a complaint letter drafted from these confirmed facts? (reply 'draft')"
+  ],
+  "draft": null,
+  "final_state": "ACTION_SELECT",
+  "flags": [],
+  "case_file": {
+    "issue_type": "damaged_item",
+    "opposite_party": {
+      "name": "HomeNest",
+      "type": "both"
+    },
+    "platform": "ShopEasy",
+    "product_or_service": "ceramic dinner set",
+    "order_id": null,
+    "order_date": "2026-11-02",
+    "amount_paid_inr": 4500.0,
+    "payment_mode": "card",
+    "timeline": [
+      {
+        "date": "2026-11-02",
+        "event": "Purchased ceramic dinner set from HomeNest via ShopEasy for Rs 4500",
+        "source": "user"
+      },
+      {
+        "date": "2026-11-04",
+        "event": "Messaged seller regarding broken item; seller refused citing no return policy",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [
+      {
+        "date": "2026-11-04",
+        "channel": "chat",
+        "ticket_id": null,
+        "response": "seller says no return policy"
+      }
+    ],
+    "no_complaint_yet": false,
+    "evidence": [
+      {
+        "type": "photo",
+        "available": true
+      }
+    ],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": true
+  },
+  "checks": {
+    "final_state": true,
+    "contains:[S": true,
+    "contains:Sources": true,
+    "absent:guarantee": true,
+    "absent:definitely": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 49.6,
+  "provider": "primary"
+}
