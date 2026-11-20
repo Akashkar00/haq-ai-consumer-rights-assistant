@@ -1,0 +1,14 @@
+# Rails-only mode: every rail is a custom Python action (see actions.py), so no main LLM is needed.
+# P1: add `models:` + `self check input` / `self check output` flows once measured on the eval set.
+rails:
+  input:
+    flows:
+      - mask sensitive data
+      - check urgent matter
+      - check prompt injection
+  output:
+    flows:
+      - verify citations
+      - block outcome promises
+      - block lawyer impersonation
+      - require disclaimer

@@ -1,0 +1,44 @@
+define bot escalate urgent
+  "urgent"
+
+define bot refuse injection
+  "injection"
+
+define bot refuse outcome
+  "outcome"
+
+define bot refuse impersonation
+  "impersonation"
+
+define flow mask sensitive data
+  $user_message = execute mask_sensitive(text=$user_message)
+
+define flow check urgent matter
+  $urgent = execute check_urgent(text=$user_message)
+  if $urgent
+    bot escalate urgent
+    stop
+
+define flow check prompt injection
+  $injection = execute check_injection(text=$user_message)
+  if $injection
+    bot refuse injection
+    stop
+
+define flow verify citations
+  $bot_message = execute verify_citations(text=$bot_message)
+
+define flow block outcome promises
+  $promise = execute check_outcome_promise(text=$bot_message)
+  if $promise
+    bot refuse outcome
+    stop
+
+define flow block lawyer impersonation
+  $imp = execute check_impersonation(text=$bot_message)
+  if $imp
+    bot refuse impersonation
+    stop
+
+define flow require disclaimer
+  $bot_message = execute add_disclaimer(text=$bot_message)

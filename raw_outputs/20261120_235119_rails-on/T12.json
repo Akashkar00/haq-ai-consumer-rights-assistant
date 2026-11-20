@@ -1,0 +1,65 @@
+{
+  "id": "T12",
+  "name": "High value and possibly time-barred",
+  "turns": [
+    "I paid Rs 6000000 for a car accessory package from MegaDeals on 15 January 2023, order MD2023001. Never delivered. I complained on 20 January 2023 by email, ticket MD-T-77. I have the invoice.",
+    "yes"
+  ],
+  "replies": [
+    "Here is what I understood:\n- Issue: non delivery\n- Seller/platform: MegaDeals\n- Item/service: car accessory package\n- Order ID / date: MD2023001 / 2023-01-15\n- Amount paid: Rs. 6,000,000\n- Earlier complaints: 1\n- Evidence: invoice\n\nIs this correct? Reply 'yes' to continue, or tell me what to change."
+  ],
+  "draft": null,
+  "final_state": "CONFIRM",
+  "flags": [],
+  "case_file": {
+    "issue_type": "non_delivery",
+    "opposite_party": {
+      "name": "MegaDeals",
+      "type": "seller"
+    },
+    "platform": null,
+    "product_or_service": "car accessory package",
+    "order_id": "MD2023001",
+    "order_date": "2023-01-15",
+    "amount_paid_inr": 6000000.0,
+    "payment_mode": null,
+    "timeline": [
+      {
+        "date": "2023-01-15",
+        "event": "Placed order MD2023001 for car accessory package and paid Rs 6000000",
+        "source": "user"
+      },
+      {
+        "date": "2023-01-20",
+        "event": "Complained by email (Ticket MD-T-77) about non-delivery",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [
+      {
+        "date": "2023-01-20",
+        "channel": "email",
+        "ticket_id": "MD-T-77",
+        "response": null
+      }
+    ],
+    "no_complaint_yet": false,
+    "evidence": [
+      {
+        "type": "invoice",
+        "available": true
+      }
+    ],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": true
+  },
+  "checks": {
+    "no_crash": false
+  },
+  "passed": false,
+  "error": "JSONDecodeError: Expecting ',' delimiter: line 19 column 6 (char 2044)",
+  "seconds": 49.7,
+  "provider": "primary"
+}

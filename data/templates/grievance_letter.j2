@@ -1,0 +1,30 @@
+To,
+The Grievance Officer
+{{ party_name }}{% if platform and platform != party_name %} (platform: {{ platform }}){% endif %}
+
+Date: {{ today }}
+
+Subject: Complaint regarding {{ issue_label }}{% if order_id %} – Order No. {{ order_id }}{% endif %}
+
+Sir/Madam,
+
+I am writing to register a complaint about {{ product }}{% if order_date %}, ordered on {{ order_date }}{% endif %}{% if amount %}, for which I paid Rs. {{ amount }}{% endif %}{% if payment_mode %} by {{ payment_mode }}{% endif %}.
+
+Facts:
+{{ narrative }}
+
+{% if complaints %}Earlier complaints made by me:
+{% for c in complaints %}- {{ c }}
+{% endfor %}
+{% endif %}Relief sought: {{ remedy }}.
+
+I request you to acknowledge this complaint and resolve it within the time allowed. If it is not resolved, I may approach the National Consumer Helpline or the appropriate Consumer Commission.
+
+{% if evidence %}Documents I can provide: {{ evidence|join(', ') }}.
+
+{% endif %}Yours faithfully,
+[Your name]
+[Your address, phone and email]
+
+---
+{{ disclaimer }}

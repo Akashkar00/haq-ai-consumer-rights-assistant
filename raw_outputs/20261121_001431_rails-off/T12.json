@@ -1,0 +1,71 @@
+{
+  "id": "T12",
+  "name": "High value and possibly time-barred",
+  "turns": [
+    "I paid Rs 6000000 for a car accessory package from MegaDeals on 15 January 2023, order MD2023001. Never delivered. I complained on 20 January 2023 by email, ticket MD-T-77. I have the invoice.",
+    "yes"
+  ],
+  "replies": [
+    "Here is what I understood:\n- Issue: non delivery\n- Seller/platform: MegaDeals\n- Item/service: car accessory package\n- Order ID / date: MD2023001 / 2023-01-15\n- Amount paid: Rs. 6,000,000\n- Earlier complaints: 1\n- Evidence: invoice\n\nIs this correct? Reply 'yes' to continue, or tell me what to change.",
+    "You paid Rs 60,00,000 for a car accessory package that was not delivered, and your email complaint has not received a resolution. Under the relevant e-commerce rules, an e-commerce entity must acknowledge a complaint within forty-eight hours and resolve it within one month [S6], and marketplace sellers cannot refuse refunds for late deliveries [S5]. However, the District Commission only has jurisdiction to hear complaints where the value paid does not exceed fifty lakh rupees [S4].\n\n**Your options (in the usual order)**\n1. Write to the seller/platform grievance officer and keep the ticket number. For e-commerce entities the Rules require acknowledgement within 48 hours and resolution within one month [S6].\n2. If that does not work, register a grievance with the National Consumer Helpline (1915 or 1800114000) [S8].\n3. Optionally send a written legal notice. An advocate can draft this; I do not cover its legal content.\n4. The Consumer Commission to approach depends on the value of what you paid [S4]. Please confirm the amount and consult an advocate.\n\n**More detail on these options**\n- Escalate through the entity's grievance officer: Every e-commerce entity is required to maintain a grievance redressal mechanism with an appointed grievance officer who must resolve grievances within one month of receipt [S6] [S7].\n- Report the issue to the National Consumer Helpline: You can register a grievance via the web portal, mobile app, WhatsApp, or by calling 1915 or 1800114000, and the helpline forwards the matter to the company [S8].\n- Consider initiating a consumer complaint: A consumer may file a complaint in relation to goods agreed to be sold or delivered [S2], provided it is filed within two years from the date the cause of action arose unless sufficient cause for delay is accepted [S3].\n\n**What I'm not sure about**\n- Your payment of Rs 60,00,000 exceeds the fifty lakh rupee limit prescribed for the District Commission [S4], and the provided sources do not state the value limits or rules for higher commissions.\n- It cannot be determined from the facts whether more than two years have passed since the cause of action arose, which would bar a Commission from admitting the complaint unless sufficient cause is shown [S3].\n- It is unclear from the case file whether MegaDeals is an independent platform or selling through a marketplace e-commerce entity, which affects which specific seller rules apply [S5] [S7].\n\n**Please consider speaking to an advocate**\n- The amount is above the District Commission's value limit in the sources, so a different Commission would apply and the claim needs professional handling.\n- More than two years have passed since the order date. The sources set a two-year limit from when the cause of action arose, so a lawyer should check whether the complaint is still in time.\n\nHaq gives general legal information based on the official sources shown. It is not a lawyer and this is not legal advice. Check the sources and consider consulting an advocate before taking formal action.\n\n**Sources**\n[S1] Consumer Protection Act, 2019 – jurisdiction of the District Commission – Section 34(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S2] Consumer Protection Act, 2019 – who may file a complaint and how – Section 35(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S3] Consumer Protection Act, 2019 – limitation period – Section 69(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n[S4] Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021 – District Commission value limit – Rule 3 – https://thc.nic.in/Central%20Governmental%20Rules/Consumer%20Protection%20(Jurisdiction%20of%20the%20District%20Commission,%20the%20State%20Commission%20and%20the%20National%20Commission)%20Rules,%202021.pdf (retrieved 2026-11-20, may change)\n[S5] Consumer Protection (E-Commerce) Rules, 2020 – seller duties on refusing returns and refunds – Rule 6(3) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20)\n[S6] Consumer Protection (E-Commerce) Rules, 2020 – grievance officer timelines – Rule 4(5) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S7] Consumer Protection (E-Commerce) Rules, 2020 – grievance mechanism and officer – Rule 4(4) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S8] National Consumer Helpline – how to register a grievance – consumerhelpline.gov.in home page – https://consumerhelpline.gov.in/ (retrieved 2026-11-20, may change)\n\nWould you like a complaint letter drafted from these confirmed facts? (reply 'draft')"
+  ],
+  "draft": null,
+  "final_state": "ACTION_SELECT",
+  "flags": [
+    "needs_lawyer"
+  ],
+  "case_file": {
+    "issue_type": "non_delivery",
+    "opposite_party": {
+      "name": "MegaDeals",
+      "type": "seller"
+    },
+    "platform": null,
+    "product_or_service": "car accessory package",
+    "order_id": "MD2023001",
+    "order_date": "2023-01-15",
+    "amount_paid_inr": 6000000.0,
+    "payment_mode": null,
+    "timeline": [
+      {
+        "date": "2023-01-15",
+        "event": "Placed order MD2023001 for car accessory package and paid Rs 6000000",
+        "source": "user"
+      },
+      {
+        "date": "2023-01-20",
+        "event": "Complained via email about non-delivery (ticket MD-T-77)",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [
+      {
+        "date": "2023-01-20",
+        "channel": "email",
+        "ticket_id": "MD-T-77",
+        "response": null
+      }
+    ],
+    "no_complaint_yet": false,
+    "evidence": [
+      {
+        "type": "invoice",
+        "available": true
+      }
+    ],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": true
+  },
+  "checks": {
+    "final_state": true,
+    "contains:advocate": true,
+    "flags_any": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 28.3,
+  "provider": "primary"
+}

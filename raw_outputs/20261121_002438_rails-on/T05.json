@@ -1,0 +1,46 @@
+{
+  "id": "T05",
+  "name": "Incomplete info: asks follow-ups, does not explain law yet",
+  "turns": [
+    "An online site cheated me, help"
+  ],
+  "replies": [
+    "I'm here to help you sort out this refund issue. \n\nTo help me understand the situation, could you please share:\n\n1. Who did you buy this from (the seller or platform name)?\n2. How much did you pay, in rupees?\n3. What was the date of your order (an approximate date is completely fine)?"
+  ],
+  "draft": null,
+  "final_state": "GATHER",
+  "flags": [],
+  "case_file": {
+    "issue_type": "other",
+    "opposite_party": {
+      "name": null,
+      "type": "unknown"
+    },
+    "platform": null,
+    "product_or_service": null,
+    "order_id": null,
+    "order_date": null,
+    "amount_paid_inr": null,
+    "payment_mode": null,
+    "timeline": [],
+    "complaints_made": [],
+    "no_complaint_yet": false,
+    "evidence": [],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [
+      "Specific nature of the issue not yet detailed"
+    ],
+    "user_confirmed": false
+  },
+  "checks": {
+    "final_state": true,
+    "absent:\\[S\\d": true,
+    "<=3 questions": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 10.7,
+  "provider": "primary"
+}

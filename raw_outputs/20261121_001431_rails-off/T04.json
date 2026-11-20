@@ -1,0 +1,60 @@
+{
+  "id": "T04",
+  "name": "Missing invoice, only bank statement",
+  "turns": [
+    "I bought a mixer grinder from a local shop on 12 September 2026 for Rs 6500 by card and the shop refuses to repair the defect. The shop is Sharma Electricals. I only have my bank statement, no invoice. No complaint made yet.",
+    "yes"
+  ],
+  "replies": [
+    "Here is what I understood:\n- Issue: defective item\n- Seller/platform: Sharma Electricals\n- Item/service: mixer grinder\n- Order ID / date: not stated / 2026-09-12\n- Amount paid: Rs. 6,500\n- Earlier complaints: none yet\n- Evidence: bank_statement\n\nIs this correct? Reply 'yes' to continue, or tell me what to change.",
+    "You purchased a defective mixer grinder for Rs 6,500 from Sharma Electricals and have not yet registered a formal complaint. If the item was purchased through an e-commerce marketplace, the seller is not permitted to refuse a return or refund for defective goods [S5]. For unresolved issues, consumers may approach the District Commission where they reside or where the seller operates, provided the amount paid is within fifty lakh rupees [S1] [S4].\n\n**Your options (in the usual order)**\n1. Write to the seller/platform grievance officer and keep the ticket number. For e-commerce entities the Rules require acknowledgement within 48 hours and resolution within one month [S6].\n2. If that does not work, register a grievance with the National Consumer Helpline (1915 or 1800114000) [S8].\n3. Optionally send a written legal notice. An advocate can draft this; I do not cover its legal content.\n4. File a complaint with the District Commission. The value limit is up to fifty lakh rupees [S4] and a complaint should be filed within two years of the cause of action [S3]. It may be filed electronically [S2].\n\n**More detail on these options**\n- Contact Sharma Electricals directly with your payment record to seek a return or refund: A seller on a marketplace e-commerce entity cannot refuse to take back goods or refuse a refund if the goods are defective [S5].\n- Lodge a complaint with the National Consumer Helpline: You can register a grievance via the portal, app, WhatsApp, or calling 1915, and it is forwarded to the seller for a response [S8].\n- File a consumer complaint before the District Commission: A consumer may file a complaint electronically accompanied by the prescribed fee within two years from the date the cause of action arose [S2] [S3].\n\n**What I'm not sure about**\n- It is not clear whether the purchase was made at a physical shop or via an e-commerce platform, which determines whether e-commerce rules apply [S5] [S7].\n- You do not have a purchase invoice, though a bank statement is available.\n- The exact nature of the defect and the specific remedy you are seeking (repair, replacement, or refund) are not stated.\n\nHaq gives general legal information based on the official sources shown. It is not a lawyer and this is not legal advice. Check the sources and consider consulting an advocate before taking formal action.\n\n**Sources**\n[S1] Consumer Protection Act, 2019 – jurisdiction of the District Commission – Section 34(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S2] Consumer Protection Act, 2019 – who may file a complaint and how – Section 35(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S3] Consumer Protection Act, 2019 – limitation period – Section 69(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n[S4] Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021 – District Commission value limit – Rule 3 – https://thc.nic.in/Central%20Governmental%20Rules/Consumer%20Protection%20(Jurisdiction%20of%20the%20District%20Commission,%20the%20State%20Commission%20and%20the%20National%20Commission)%20Rules,%202021.pdf (retrieved 2026-11-20, may change)\n[S5] Consumer Protection (E-Commerce) Rules, 2020 – seller duties on refusing returns and refunds – Rule 6(3) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20)\n[S6] Consumer Protection (E-Commerce) Rules, 2020 – grievance officer timelines – Rule 4(5) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S7] Consumer Protection (E-Commerce) Rules, 2020 – grievance mechanism and officer – Rule 4(4) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S8] National Consumer Helpline – how to register a grievance – consumerhelpline.gov.in home page – https://consumerhelpline.gov.in/ (retrieved 2026-11-20, may change)\n\nWould you like a complaint letter drafted from these confirmed facts? (reply 'draft')"
+  ],
+  "draft": null,
+  "final_state": "ACTION_SELECT",
+  "flags": [],
+  "case_file": {
+    "issue_type": "defective_item",
+    "opposite_party": {
+      "name": "Sharma Electricals",
+      "type": "seller"
+    },
+    "platform": null,
+    "product_or_service": "mixer grinder",
+    "order_id": null,
+    "order_date": "2026-09-12",
+    "amount_paid_inr": 6500.0,
+    "payment_mode": "card",
+    "timeline": [
+      {
+        "date": "2026-09-12",
+        "event": "Purchased mixer grinder from Sharma Electricals for Rs 6500 by card",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [],
+    "no_complaint_yet": true,
+    "evidence": [
+      {
+        "type": "bank_statement",
+        "available": true
+      },
+      {
+        "type": "invoice",
+        "available": false
+      }
+    ],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": true
+  },
+  "checks": {
+    "final_state": true,
+    "contains_any": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 95.2,
+  "provider": "primary"
+}

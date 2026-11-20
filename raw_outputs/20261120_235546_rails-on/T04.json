@@ -1,0 +1,60 @@
+{
+  "id": "T04",
+  "name": "Missing invoice, only bank statement",
+  "turns": [
+    "I bought a mixer grinder from a local shop on 12 September 2026 for Rs 6500 by card and the shop refuses to repair the defect. The shop is Sharma Electricals. I only have my bank statement, no invoice. No complaint made yet.",
+    "yes"
+  ],
+  "replies": [
+    "Here is what I understood:\n- Issue: defective item\n- Seller/platform: Sharma Electricals\n- Item/service: mixer grinder\n- Order ID / date: not stated / 2026-09-12\n- Amount paid: Rs. 6,500\n- Earlier complaints: none yet\n- Evidence: bank_statement\n\nIs this correct? Reply 'yes' to continue, or tell me what to change.",
+    "You purchased a mixer grinder for Rs 6,500 from Sharma Electricals that is defective, but you have not yet lodged a formal complaint. The sources state that a consumer may file a complaint before the District Commission if the value of the goods paid does not exceed fifty lakh rupees [S2] [S4]. The sources also state that such a complaint must be filed within two years from when the cause of action arose, and may be instituted where the seller operates, where the cause of action arose, or where you reside [S1] [S3].\n\n**Your options (in the usual order)**\n1. Write to the seller/platform grievance officer and keep the ticket number. For e-commerce entities the Rules require acknowledgement within 48 hours and resolution within one month [S6].\n2. If that does not work, register a grievance with the National Consumer Helpline (1915 or 1800114000) [S8].\n3. Optionally send a written legal notice. An advocate can draft this; I do not cover its legal content.\n4. File a complaint with the District Commission. The value limit is up to fifty lakh rupees [S4] and a complaint should be filed within two years of the cause of action [S3]. It may be filed electronically [S2].\n\n**More detail on these options**\n- Raise the issue directly with Sharma Electricals to request a return, refund, or repair: The sources state that a seller offering goods through a marketplace e-commerce entity shall not refuse to take back goods or refund consideration if the goods are defective [S5].\n- Register a grievance with the National Consumer Helpline: The sources state that you can register a consumer grievance via the web portal, mobile app, UMANG, WhatsApp, or by calling 1915 or 1800114000 to have it forwarded to the company [S8].\n- File a consumer complaint with the District Commission: The sources state that a consumer may file a complaint with the District Commission, including by electronic filing, along with the prescribed fee [S2].\n\n**What I'm not sure about**\n- It is unclear whether the mixer grinder was purchased offline in a store or through an online platform, whereas return and refund rules in the sources specifically govern marketplace e-commerce sellers [S5].\n- You do not have the invoice, and the provided sources do not address how a consumer can proceed when an invoice is missing.\n- The specific nature and timing of the defect in the mixer grinder have not been specified.\n- Your location is unknown, which is relevant because the sources state that a complaint may be filed where you reside [S1].\n\nHaq gives general legal information based on the official sources shown. It is not a lawyer and this is not legal advice. Check the sources and consider consulting an advocate before taking formal action.\n\n**Sources**\n[S1] Consumer Protection Act, 2019 – jurisdiction of the District Commission – Section 34(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S2] Consumer Protection Act, 2019 – who may file a complaint and how – Section 35(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S3] Consumer Protection Act, 2019 – limitation period – Section 69(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n[S4] Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021 – District Commission value limit – Rule 3 – https://thc.nic.in/Central%20Governmental%20Rules/Consumer%20Protection%20(Jurisdiction%20of%20the%20District%20Commission,%20the%20State%20Commission%20and%20the%20National%20Commission)%20Rules,%202021.pdf (retrieved 2026-11-20, may change)\n[S5] Consumer Protection (E-Commerce) Rules, 2020 – seller duties on refusing returns and refunds – Rule 6(3) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20)\n[S6] Consumer Protection (E-Commerce) Rules, 2020 – grievance officer timelines – Rule 4(5) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S7] Consumer Protection (E-Commerce) Rules, 2020 – grievance mechanism and officer – Rule 4(4) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S8] National Consumer Helpline – how to register a grievance – consumerhelpline.gov.in home page – https://consumerhelpline.gov.in/ (retrieved 2026-11-20, may change)\n\nWould you like a complaint letter drafted from these confirmed facts? (reply 'draft')"
+  ],
+  "draft": null,
+  "final_state": "ACTION_SELECT",
+  "flags": [],
+  "case_file": {
+    "issue_type": "defective_item",
+    "opposite_party": {
+      "name": "Sharma Electricals",
+      "type": "seller"
+    },
+    "platform": null,
+    "product_or_service": "mixer grinder",
+    "order_id": null,
+    "order_date": "2026-09-12",
+    "amount_paid_inr": 6500.0,
+    "payment_mode": "card",
+    "timeline": [
+      {
+        "date": "2026-09-12",
+        "event": "Purchased mixer grinder from Sharma Electricals for Rs 6500 using card",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [],
+    "no_complaint_yet": true,
+    "evidence": [
+      {
+        "type": "bank_statement",
+        "available": true
+      },
+      {
+        "type": "invoice",
+        "available": false
+      }
+    ],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": true
+  },
+  "checks": {
+    "final_state": true,
+    "contains_any": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 60.2,
+  "provider": "primary"
+}

@@ -1,0 +1,4 @@
+PIB Delhi, 30 DEC 2021 (Release ID 1786342), https://www.pib.gov.in/PressReleasePage.aspx?PRID=1786342
+1. District Commissions shall have jurisdiction to entertain complaints where value of the goods or services paid as consideration does not exceed 50 lakh rupees.
+2. State Commissions shall have jurisdiction to entertain complaints where value of the goods or services paid as consideration exceeds 50 lakh rupees but does not exceed 2 crore rupees.
+3. National Commission shall have jurisdiction to entertain complaints where value of the goods or services paid as consideration exceeds 2 crore rupees.

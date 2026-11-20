@@ -1,0 +1,59 @@
+{
+  "id": "T03",
+  "name": "Cancelled order, no refund after 40 days, UPI",
+  "turns": [
+    "I cancelled my order of a backpack on QuickKart on 1 October 2026, paid Rs 1800 by UPI. Refund never came, it has been 40 days. No complaint yet.",
+    "I placed the order on 28 September 2026.",
+    "yes"
+  ],
+  "replies": [
+    "I've noted the details of your refund issue so far. \n\nTo help you with the next steps, could you let me know:\n\n1. Around what date did you place the order? (An approximate date is completely fine.)",
+    "Here is what I understood:\n- Issue: cancelled not refunded\n- Seller/platform: QuickKart\n- Item/service: backpack\n- Order ID / date: not stated / 2026-09-28\n- Amount paid: Rs. 1,800\n- Earlier complaints: none yet\n- Evidence: none mentioned\n\nGaps: No invoice or bank statement mentioned: proof of payment may be needed.; No evidence mentioned yet (screenshots, emails, photos, chats).\n\nIs this correct? Reply 'yes' to continue, or tell me what to change.",
+    "You cancelled an order for a backpack on QuickKart for which you paid 1800 rupees, but you have not yet received a refund or submitted a formal grievance. The sources provide that e-commerce entities must maintain a grievance redressal mechanism and appoint a grievance officer to handle consumer complaints [S6]. Additionally, a consumer may bring a complaint before the District Commission within two years from when the cause of action arose [S2] [S3].\n\n**Your options (in the usual order)**\n1. Write to the seller/platform grievance officer and keep the ticket number. For e-commerce entities the Rules require acknowledgement within 48 hours and resolution within one month [S5].\n2. If that does not work, register a grievance with the National Consumer Helpline (1915 or 1800114000) [S8].\n3. Optionally send a written legal notice. An advocate can draft this; I do not cover its legal content.\n4. File a complaint with the District Commission. The value limit is up to fifty lakh rupees [S4] and a complaint should be filed within two years of the cause of action [S3]. It may be filed electronically [S2].\n\n**More detail on these options**\n- Submit a complaint to QuickKart's grievance officer: Every e-commerce entity is required to appoint a grievance officer whose contact details are displayed on its platform, and this officer must acknowledge complaints within forty-eight hours and resolve them within one month [S5] [S6].\n- Register a grievance with the National Consumer Helpline: You can lodge a grievance through the National Consumer Helpline web portal, mobile app, UMANG, WhatsApp, or by calling 1915 or 1800114000, and they will forward it to the concerned entity for a response [S8].\n- File a complaint before the District Commission: A consumer can file a complaint, including electronically along with the prescribed fee, before the District Commission where the consumer lives or works, where the opposite party carries on business, or where the cause of action arose, provided the consideration does not exceed fifty lakh rupees and it is filed within two years [S1] [S2] [S3] [S4].\n\n**What I'm not sure about**\n- The specific cancellation and refund terms of QuickKart are not provided in the case details.\n- The sources specify when a seller cannot refuse a refund (such as for defective, deficient, or late goods), but they do not explicitly cover rules for voluntary order cancellations by a user [S7].\n- The order ID and proof of payment or cancellation confirmation are not stated in the facts.\n- Your geographic location is not provided, which is relevant for determining the local limits of the District Commission [S1].\n\nHaq gives general legal information based on the official sources shown. It is not a lawyer and this is not legal advice. Check the sources and consider consulting an advocate before taking formal action.\n\n**Sources**\n[S1] Consumer Protection Act, 2019 – jurisdiction of the District Commission – Section 34(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S2] Consumer Protection Act, 2019 – who may file a complaint and how – Section 35(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20, may change)\n[S3] Consumer Protection Act, 2019 – limitation period – Section 69(1)-(2) – https://consumeraffairs.gov.in/public/upload/files/CP%20Act%202019_1732700731.pdf (retrieved 2026-11-20)\n[S4] Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021 – District Commission value limit – Rule 3 – https://thc.nic.in/Central%20Governmental%20Rules/Consumer%20Protection%20(Jurisdiction%20of%20the%20District%20Commission,%20the%20State%20Commission%20and%20the%20National%20Commission)%20Rules,%202021.pdf (retrieved 2026-11-20, may change)\n[S5] Consumer Protection (E-Commerce) Rules, 2020 – grievance officer timelines – Rule 4(5) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S6] Consumer Protection (E-Commerce) Rules, 2020 – grievance mechanism and officer – Rule 4(4) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20, may change)\n[S7] Consumer Protection (E-Commerce) Rules, 2020 – seller duties on refusing returns and refunds – Rule 6(3) – https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf (retrieved 2026-11-20)\n[S8] National Consumer Helpline – how to register a grievance – consumerhelpline.gov.in home page – https://consumerhelpline.gov.in/ (retrieved 2026-11-20, may change)\n\nWould you like a complaint letter drafted from these confirmed facts? (reply 'draft')"
+  ],
+  "draft": null,
+  "final_state": "ACTION_SELECT",
+  "flags": [],
+  "case_file": {
+    "issue_type": "cancelled_not_refunded",
+    "opposite_party": {
+      "name": "QuickKart",
+      "type": "platform"
+    },
+    "platform": "QuickKart",
+    "product_or_service": "backpack",
+    "order_id": null,
+    "order_date": "2026-09-28",
+    "amount_paid_inr": 1800.0,
+    "payment_mode": "upi",
+    "timeline": [
+      {
+        "date": "2026-09-28",
+        "event": "Order placed",
+        "source": "user"
+      },
+      {
+        "date": "2026-10-01",
+        "event": "Order cancelled by user",
+        "source": "user"
+      }
+    ],
+    "complaints_made": [],
+    "no_complaint_yet": true,
+    "evidence": [],
+    "remedy_sought": null,
+    "user_location": null,
+    "notes_uncertain": [],
+    "user_confirmed": true
+  },
+  "checks": {
+    "final_state": true,
+    "contains:National Consumer Helpline": true,
+    "contains:[S": true,
+    "no_unverified_citation": true
+  },
+  "passed": true,
+  "error": null,
+  "seconds": 31.4,
+  "provider": "primary"
+}
