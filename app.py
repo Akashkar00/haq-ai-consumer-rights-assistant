@@ -12,6 +12,7 @@ except Exception:  # no secrets file locally: .env is used instead
     pass
 
 from haq import policy
+from haq.corpus import Corpus
 from haq.llm.base import get_client
 from haq.orchestrator import Session
 
@@ -20,8 +21,14 @@ st.title("Haq (हक़)")
 st.caption("A consumer-refund helper for India. " + policy.DISCLAIMER)
 st.warning("Do not share Aadhaar, card numbers or passwords. Phone numbers, emails and card/Aadhaar-like numbers are masked automatically.")
 
+@st.cache_resource
+def get_corpus():
+    """One Corpus (BM25 index + Qdrant connection) shared by all sessions."""
+    return Corpus()
+
+
 if "session" not in st.session_state:
-    st.session_state.session = Session(get_client())
+    st.session_state.session = Session(get_client(), get_corpus())
     st.session_state.chat = [("assistant", "Tell me what happened with your order, in your own words.")]
     st.session_state.draft = None
 s: Session = st.session_state.session
@@ -54,6 +61,7 @@ with st.sidebar:
     st.subheader("Case file (live)")
     st.json(s.case.model_dump(mode="json", exclude_none=True), expanded=False)
     st.caption(f"State: {s.state}")
+    st.caption(f"Retrieval: {s.corpus.last_mode_used} (configured: {s.corpus.mode}, vector store: {'on' if s.corpus.vector else 'off'})")
     if st.session_state.draft:
         st.subheader("Draft")
         st.text_area("Editable draft", st.session_state.draft, height=350)

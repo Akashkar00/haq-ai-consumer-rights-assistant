@@ -1,0 +1,17 @@
+.venv
+.git
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+raw_outputs
+evals
+tests
+docs
+scripts
+submission
+data/raw_sources
+data/qdrant_local
+**/__pycache__
+.pytest_cache
+*.md

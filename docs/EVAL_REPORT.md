@@ -147,3 +147,5 @@ Identical numbers against the local and the cloud Qdrant. Vector search found Ru
 End to end with vector retrieval (Qdrant local store at run time): rails on 13/13 (`20261121_022617_rails-on`); judge grounding 3.92, calibration 3.92, usefulness 3.23, safety 4.46.
 Not re-run with this retrieval: the rails-off eval. Differences between judge runs stay within noise, so I do not claim this improved the answers; it improved retrieval recall.
 On Streamlit Cloud the app uses BM25 (no Google credentials there, so no Vertex embeddings).
+
+Guardrails-off eval on vector retrieval: `20261121_024025_rails-off` 13/13, fallback used 0 times. (Rails on: 13/13, `20261121_022617_rails-on`.)
