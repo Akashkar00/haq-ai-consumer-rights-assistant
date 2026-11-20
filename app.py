@@ -1,4 +1,6 @@
 import os
+import re
+import time
 
 import streamlit as st
 
@@ -40,22 +42,38 @@ MAX_USER_MESSAGES = int(os.getenv("MAX_USER_MESSAGES", "30"))  # per session, so
 if "n_user" not in st.session_state:
     st.session_state.n_user = 0
 
+def stream_words(text: str, total_seconds: float = 3.0):
+    """Reveal an already-complete reply piece by piece. (The model's answer is produced in one go and then
+    checked by the guardrails, so this is a display effect, not live token streaming.)"""
+    parts = re.split(r"(\s+)", text)
+    delay = min(0.02, total_seconds / max(len(parts), 1))
+    for part in parts:
+        yield part
+        if part.strip():
+            time.sleep(delay)
+
+
 if prompt := st.chat_input("Describe your problem or reply here"):
-    if st.session_state.n_user >= MAX_USER_MESSAGES:
-        st.session_state.chat.append(("user", prompt))
-        st.session_state.chat.append(("assistant", "This session has reached its message limit. Please refresh the page to start a new one."))
-        st.rerun()
-    st.session_state.n_user += 1
     st.session_state.chat.append(("user", prompt))
-    with st.spinner("Thinking..."):
-        try:
-            r = s.handle(prompt)
-            st.session_state.chat.append(("assistant", r.text))
-            if r.draft:
-                st.session_state.draft = r.draft
-        except Exception as e:  # LLM outage or malformed output: never crash the chat
-            st.session_state.chat.append(("assistant", f"Sorry, something went wrong on my side ({type(e).__name__}). Please try again."))
-    st.rerun()
+    with st.chat_message("user"):  # show the question immediately, not after the answer arrives
+        st.markdown(prompt)
+    reply = None
+    if st.session_state.n_user >= MAX_USER_MESSAGES:
+        reply = "This session has reached its message limit. Please refresh the page to start a new one."
+    else:
+        st.session_state.n_user += 1
+    with st.chat_message("assistant"):
+        if reply is None:
+            with st.spinner("Thinking..."):
+                try:
+                    r = s.handle(prompt)
+                    reply = r.text
+                    if r.draft:
+                        st.session_state.draft = r.draft
+                except Exception as e:  # LLM outage or malformed output: never crash the chat
+                    reply = f"Sorry, something went wrong on my side ({type(e).__name__}). Please try again."
+        st.write_stream(stream_words(reply))
+    st.session_state.chat.append(("assistant", reply))
 
 with st.sidebar:
     st.subheader("Case file (live)")
