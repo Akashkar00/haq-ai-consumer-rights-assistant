@@ -1,5 +1,7 @@
+import calendar
 import json
 import re
+from datetime import date
 
 from pydantic import ValidationError
 
@@ -32,7 +34,36 @@ def ground(case: CaseFile, user_text: str) -> CaseFile:
     return case
 
 
-def extract(llm, case: CaseFile, user_text: str, all_user_text: str) -> CaseFile:
+_MONTHS = {m.lower(): i for i, m in enumerate(calendar.month_name) if m}
+_MONTHS.update({m.lower(): i for i, m in enumerate(calendar.month_abbr) if m})
+_MON = "|".join(sorted(_MONTHS, key=len, reverse=True))
+_DAY_MON = re.compile(rf"\b(\d{{1,2}})(?:st|nd|rd|th)?\s+(?:of\s+)?({_MON})\b(?!\s*,?\s*\d{{4}})", re.I)
+_MON_DAY = re.compile(rf"\b({_MON})\s+(\d{{1,2}})(?:st|nd|rd|th)?\b(?!\s*,?\s*\d{{4}})", re.I)
+
+
+def fill_missing_year(case: CaseFile, user_text: str, today: date) -> CaseFile:
+    """"5 March" with no year: take the most recent past 5 March and flag it, so the user can correct it at confirm."""
+    if case.order_date is not None:
+        return case
+    found = {(_MONTHS[m.group(2).lower()], int(m.group(1))) for m in _DAY_MON.finditer(user_text)}
+    found |= {(_MONTHS[m.group(1).lower()], int(m.group(2))) for m in _MON_DAY.finditer(user_text)}
+    if len(found) != 1:
+        return case
+    month, day = found.pop()
+    for year in (today.year, today.year - 1):
+        try:
+            d = date(year, month, day)
+        except ValueError:
+            return case
+        if d <= today:
+            case.order_date = d
+            case.notes_uncertain = list(dict.fromkeys(
+                case.notes_uncertain + [f"You gave no year; I assumed {d.isoformat()}. Please correct it if wrong."]))
+            return case
+    return case
+
+
+def extract(llm, case: CaseFile, user_text: str, all_user_text: str, today: date | None = None) -> CaseFile:
     system = (PROMPTS / "extract.md").read_text()
     user = f"CURRENT CASE FILE:\n{case.model_dump_json()}\n\nUSER MESSAGE:\n{user_text}"
     messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
@@ -43,7 +74,7 @@ def extract(llm, case: CaseFile, user_text: str, all_user_text: str) -> CaseFile
             data = parse_json(raw)
             updated = CaseFile.model_validate(data)
             updated.user_confirmed = False
-            return ground(updated, all_user_text)
+            return fill_missing_year(ground(updated, all_user_text), all_user_text, today or date.today())
         except (ValueError, ValidationError) as e:
             last_err = e
             messages = messages + [

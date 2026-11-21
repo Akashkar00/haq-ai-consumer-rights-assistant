@@ -226,3 +226,18 @@ def test_retrieval_eval_final_recall_is_complete_and_no_irrelevant_ecommerce():
     from evals.retrieval_eval import run
     res = run()
     assert res["mean_final_recall"] == 1.0 and res["irrelevant_ecom_total"] == 0, res["rows"]
+
+
+def test_platform_counts_as_seller_and_yearless_date_is_filled():
+    from datetime import date
+    from haq.extractor import fill_missing_year
+    from haq.gaps import missing_fields
+    from haq.schema import CaseFile
+    c = CaseFile(platform="Amazon", amount_paid_inr=18000)
+    assert "opposite_party" not in missing_fields(c)
+    c = fill_missing_year(c, "bought on Amazon on 5 March, phone cracked", date(2026, 11, 21))
+    assert c.order_date == date(2026, 3, 5)
+    c2 = fill_missing_year(CaseFile(), "ordered 5 March and returned 9 April", date(2026, 11, 21))
+    assert c2.order_date is None
+    c3 = fill_missing_year(CaseFile(), "ordered 5 March 2025", date(2026, 11, 21))
+    assert c3.order_date is None

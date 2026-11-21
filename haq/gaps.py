@@ -5,7 +5,7 @@ def missing_fields(c: CaseFile) -> list[str]:
     miss = []
     if c.issue_type is None:
         miss.append("issue_type")
-    if not c.opposite_party.name:
+    if not (c.opposite_party.name or c.platform):
         miss.append("opposite_party")
     if c.amount_paid_inr is None:
         miss.append("amount_paid_inr")

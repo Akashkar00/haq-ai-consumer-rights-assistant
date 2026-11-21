@@ -45,14 +45,15 @@ class Session:
     def _summary(self) -> str:
         c = self.case
         lines = [f"- Issue: {c.issue_type.value.replace('_', ' ') if c.issue_type else 'not stated'}",
-                 f"- Seller/platform: {c.opposite_party.name or 'not stated'}{' via ' + c.platform if c.platform and c.platform != c.opposite_party.name else ''}",
+                 f"- Seller/platform: {c.opposite_party.name or c.platform or 'not stated'}{' via ' + c.platform if c.opposite_party.name and c.platform and c.platform != c.opposite_party.name else ''}",
                  f"- Item/service: {c.product_or_service or 'not stated'}",
                  f"- Order ID / date: {c.order_id or 'not stated'} / {c.order_date.isoformat() if c.order_date else 'not stated'}",
                  f"- Amount paid: {f'Rs. {c.amount_paid_inr:,.0f}' if c.amount_paid_inr is not None else 'not stated'}",
                  f"- Earlier complaints: {len(c.complaints_made) or ('none yet' if c.no_complaint_yet else 'not stated')}",
                  f"- Evidence: {', '.join(e.type for e in c.evidence if e.available) or 'none mentioned'}"]
         gap = gaps.evidence_gaps(c) + [f"Missing: {m}" for m in gaps.missing_fields(c)]
-        return "Here is what I understood:\n" + "\n".join(lines) + ("\n\nGaps: " + "; ".join(gap) if gap else "") + \
+        notes = [n for n in c.notes_uncertain if "assumed" in n]
+        return "Here is what I understood:\n" + "\n".join(lines) + ("\n\nNote: " + " ".join(notes) if notes else "") + ("\n\nGaps: " + "; ".join(gap) if gap else "") + \
             "\n\nIs this correct? Reply 'yes' to continue, or tell me what to change."
 
     def _ask(self, missing: list[str]) -> str:
@@ -69,7 +70,7 @@ class Session:
         return "To help you, please tell me:\n" + "\n".join(f"{i}. {t}" for i, t in enumerate(topics, 1))
 
     def _gather(self, text: str) -> Reply:
-        self.case = extractor.extract(self.llm, self.case, text, " ".join(self.user_texts))
+        self.case = extractor.extract(self.llm, self.case, text, " ".join(self.user_texts), self.today)
         missing = gaps.missing_fields(self.case)
         if missing and self.rounds < 3:
             self.rounds += 1
