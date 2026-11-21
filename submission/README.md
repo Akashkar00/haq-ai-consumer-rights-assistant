@@ -16,8 +16,7 @@ Kuku AI Generalist assignment, Problem 2 (Build an AI Lawyer).
 | Raw outputs | `raw_outputs/` in this folder (also in the repo under `submission/raw_outputs`) |
 | Walkthrough video | not recorded |
 
-The live app runs on Google Cloud Run with Gemini 3.8 Flash on Vertex AI, Vertex embeddings and Qdrant Cloud. There is also a lighter copy on Streamlit Community Cloud
-(https://haq-consumer-rights-india.streamlit.app/) that uses Claude Haiku and keyword search only, because that host has no Google credentials. Each session is capped at 30 messages.
+The live app runs on Google Cloud Run with Gemini 3.8 Flash on Vertex AI, Vertex embeddings and Qdrant Cloud. Each session is capped at 30 messages.
 The first request after the app has been idle can take 20 to 40 seconds.
 
 ## What is in this folder

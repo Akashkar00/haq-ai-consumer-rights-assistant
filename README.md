@@ -6,7 +6,7 @@ facts. It is general legal information, not legal advice. Scope: one problem typ
 not delivered, faulty, wrong, cancelled without refund, or return refused).
 
 Repo: https://github.com/Akashkar00/haq-ai-consumer-rights-assistant
-Live demo: https://haq-consumer-rights-india.streamlit.app/ (Anthropic Haiku, 30-message cap per session)
+Live demo: https://haq-1056072922203.us-central1.run.app (Google Cloud Run, 30-message cap per session)
 
 ## Run
 

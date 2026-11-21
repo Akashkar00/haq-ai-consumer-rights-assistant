@@ -132,7 +132,7 @@ Judge: grounding 4.0, calibration 3.77, usefulness 3.08, safety 4.62.
 
 ## Deployment
 
-Deployed on Streamlit Community Cloud (https://haq-consumer-rights-india.streamlit.app/, Anthropic Haiku as the model, 30-message cap per session). Checked in a browser on the live site:
+An earlier Streamlit Community Cloud copy (now removed) was checked in a browser:
 full journey (confirm, explanation with sources and timeline, draft with download button) and the urgent-case escalation. The live app was on the commit before the retrieval fix.
 
 ## Semantic retrieval: Vertex AI embeddings + Qdrant
@@ -146,6 +146,5 @@ Identical numbers against the local and the cloud Qdrant. Vector search found Ru
 
 End to end with vector retrieval (Qdrant local store at run time): rails on 13/13 (`20261121_022617_rails-on`); judge grounding 3.92, calibration 3.92, usefulness 3.23, safety 4.46.
 Not re-run with this retrieval: the rails-off eval. Differences between judge runs stay within noise, so I do not claim this improved the answers; it improved retrieval recall.
-On Streamlit Cloud the app uses BM25 (no Google credentials there, so no Vertex embeddings).
 
 Guardrails-off eval on vector retrieval: `20261121_024025_rails-off` 13/13, fallback used 0 times. (Rails on: 13/13, `20261121_022617_rails-on`.)
